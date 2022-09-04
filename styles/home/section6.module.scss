@@ -1,0 +1,88 @@
+.section {
+  width: 75%;
+  max-width: 75%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  h2 {
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: capitalize;
+    font-size: 2.875rem;
+    color: #3c3f48;
+  }
+}
+.feedbacks {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  overflow: auto;
+}
+.feedback {
+  width: 20.5rem;
+  min-height: 26.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  background: #ffffff;
+  box-shadow: 0rem 0.8125rem 1.1875rem rgba(0, 0, 0, 0.07);
+  margin-right: 1.875rem;
+  h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.0063rem;
+    color: #252b42;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.0125rem;
+    color: #737373;
+  }
+  .divider {
+    width: 3.125rem;
+    height: 0.125rem;
+    background: var(--primary-color);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .section {
+    background-color: #edf0fb;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    padding: 2rem 0;
+    margin-bottom: 0;
+  }
+  .feedbacks {
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+  }
+  .feedback {
+    min-width: 80vw;
+  }
+}
+
+//font sizes for mobile
+@media only screen and (max-width: 500px) {
+  .section {
+    padding: 1rem 0;
+    h2 {
+      line-height: 120%;
+      font-size: 1.4rem;
+    }
+  }
+  .feedback {
+    h3 {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+}

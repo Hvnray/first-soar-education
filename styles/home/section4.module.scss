@@ -1,0 +1,70 @@
+.section {
+  width: 75%;
+  max-width: 75%;
+  margin: 0 auto;
+  h2 {
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 140%;
+    text-transform: capitalize;
+    color: #3c3f48;
+  }
+}
+.infoArea{
+display: flex;
+flex-flow: wrap;
+width: 100%;
+justify-content: space-around;
+}
+.info {
+  text-align: center;
+  width: 30%;
+  padding: 0.5rem 1rem;
+}
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+  color: #6854fc;
+}
+.text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 800px) {
+  .section{
+  max-width: 100%;
+  width: 100%;
+  }
+  .info {
+    width: 45%;
+  }
+  .title{
+    font-size: 1rem;
+    line-height: 150%;
+  }
+  .text{
+    font-size: 0.8rem;
+    line-height: 140%;
+  }
+}
+//font sizes for mobile
+@media only screen and (max-width: 500px) {
+  .section{
+    h2{
+      font-size: 1.6rem;
+      line-height: 120%;
+      padding-top: 1rem;
+
+    }
+    }
+}

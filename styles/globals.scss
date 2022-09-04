@@ -1,0 +1,113 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  max-width: 100vw;
+}
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #1140e7;
+  --secondary-color: #edf0fb;
+  --accent-color: #000000;
+  --shades-color: #9db2fa;
+  --texts-color: #2e2c2c;
+  --black-color-1: #544f52;
+  --black-color-2: #888185;
+  --red-color-1: #fc7777;
+  --red-color-2: #ed737e;
+  --purple-color: #9747ff;
+  --yellow-color: #edf9a7;
+  --green-color: #10a353;
+  --orange-color: #fe8127;
+  --header-background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2 {
+  font-family: "Inter", sans-serif;
+}
+h1 {
+  font-size: 4.25rem;
+  letter-spacing: 0;
+  font-weight: bold;
+  line-height: 80%;
+}
+h2 {
+  font-size: 2.875rem;
+  letter-spacing: 0;
+  font-weight: bold;
+  line-height: 90%;
+}
+h3 {
+  font-size: 2.875rem;
+  letter-spacing: 0.016rem;
+  font-weight: bold;
+  line-height: 0%;
+}
+h4 {
+  font-size: 2rem;
+  letter-spacing: 0.08rem;
+  font-weight: bold;
+  line-height: 140%;
+}
+h5 {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-weight: bold;
+  line-height: 140%;
+}
+
+h6 {
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  font-weight: bold;
+  line-height: 140%;
+}
+p,
+body,
+b {
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  font-weight: normal;
+  line-height: 150%;
+}
+small {
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  font-weight: 300;
+  line-height: 140%;
+}
+b,
+.bold {
+  font-weight: bold;
+  line-height: 140%;
+}
+.tiny {
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  font-weight: 300;
+  line-height: 140%;
+}
+.pretext {
+  font-size: 0.625rem;
+  letter-spacing: 0.4rem;
+  font-weight: 300;
+  line-height: 140%;
+}
+@media (prefers-color-scheme: dark) {
+  /* html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  } */
+}

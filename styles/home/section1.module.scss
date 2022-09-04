@@ -1,0 +1,175 @@
+.section {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  max-width: 75%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 4.5rem;
+  // Increase the padding on smaller screen 0 6rem
+  padding: 0 4rem;
+  .textArea {
+    width: 50%;
+    // height: 75vh;
+    background-image: url("/studyInPhilippines.svg");
+    background-size: contain;
+    // background-color: red;
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 4.25rem;
+      line-height: 5rem;
+      /* or 118% */
+
+      text-transform: capitalize;
+    }
+    h2 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.75rem;
+      line-height: 150%;
+      /* or 42px */
+      color: #16161d;
+    }
+    a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.75rem;
+      line-height: 150%;
+      display: block;
+      margin-bottom: 1.5rem;
+      /* identical to box height, or 42px */
+      color: #1140e7;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    button {
+      padding: 0.9375rem;
+      background: #1140e7;
+      border-radius: 0.5rem;
+      border: 1px solid transparent;
+      color: #ffffff;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.625rem;
+      line-height: 1.5rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .photoArea {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+    .landscapes,
+    .portraits {
+      display: flex;
+      flex-direction: column;
+      padding-right: 2rem;
+      .img {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .landscapes {
+      margin-top: 1rem;
+      .img {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .section {
+    width: 90%;
+    max-width: 90%;
+    padding: 0 2rem;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .section {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 2rem;
+    .textArea {
+      h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .section {
+    width: 100%;
+    max-width: 100%;
+    padding: 6rem 2rem 2.5rem;
+    margin-top: 0;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("/image2.svg");
+    background-repeat: repeat,no-repeat;
+    background-size: cover;
+    background-position: 50% -10rem;
+    .textArea {
+      color: #fff;
+      h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+        color: #fff;
+      }
+      h2 {
+        font-size: 1.25rem;
+        color: #fff;
+        line-height: 130%;
+      }
+      a{
+        display: none;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .section {
+    text-align: center;
+    .textArea {
+      width: 100%;
+      h1 {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+      }
+      h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+    .photoArea {
+      display: none;
+    }
+  }
+}
+
+//font sizes for mobile
+@media only screen and (max-width: 500px) {
+  .section {
+    background-position: 50% -1rem;
+    .textArea {
+      button {
+        padding: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+      h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}

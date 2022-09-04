@@ -1,0 +1,123 @@
+// @media (max-width: 600px) {
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   .card,
+//   .footer {
+//     border-color: #222;
+//   }
+//   .code {
+//     background: #111;
+//   }
+//   .logo img {
+//     filter: invert(1);
+//   }
+// }
+
+.header {
+  display: flex;
+  padding: 0 2rem;
+  min-height: 4rem;
+  // max-height: 5.625rem;
+  align-items: center;
+  max-width: 100vw;
+  justify-content: space-between;
+  background-color: var(--header-background);
+  // background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0rem 0.8125rem 1.1875rem rgb(0 0 0 / 7%);
+  button,
+  .mobileMenu {
+    display: none;
+  }
+  nav {
+    width: 60%;
+    text-align: right;
+    a {
+      color: rgba(60, 63, 72, 0.54);
+      margin-right: 2.5rem;
+      padding-bottom: 0.425rem;
+      border-bottom: 0.125rem solid transparent;
+      &:hover {
+        color: var(--primary-color);
+        border-bottom: 0.125rem solid var(--primary-color);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .header {
+    padding: 0;
+    background-color: transparent;
+    flex-wrap: wrap;
+    &.menuOpened {
+      background-color: var(--header-background);
+    }
+    .logo {
+      margin-left: 2rem;
+    }
+    button {
+      display: block;
+      background-color: transparent;
+      border: none;
+      background-image: url("/menu.svg");
+      background-repeat: no-repeat;
+      width: 3.7rem;
+      height: 3.7rem;
+      margin-right: 2rem;
+      &.navHasScroll {
+        background-image: url("/menu_black.svg");
+      }
+      &.menuOpened {
+        margin-top: 0.5rem;
+        margin-bottom: 0.2rem;
+        margin-right: 1.8rem;
+        background-image: url("/menu_close.svg");
+      }
+    }
+    nav {
+      display: none;
+    }
+    .mobileMenu {
+      display: block;
+      min-width: 100vw;
+      width: 100vw;
+      z-index: 1;
+      padding: 0;
+      background: #131313;
+      box-shadow: -1.25rem 0px 6.25rem rgba(0, 0, 0, 0.1);
+      a {
+        display: block;
+        padding: 1rem 2rem;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.625rem;
+        line-height: 140%;
+        /* or 36px */
+
+        color: #ffffff;
+      }
+      .mobileMenuSocials ul {
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-content: flex-start;
+        padding: 0;
+      }
+    }
+  }
+}
+//font sizes for mobile
+@media only screen and (max-width: 500px) {
+  .header {
+    .mobileMenu {
+      a {
+        padding: 1rem 1.2rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

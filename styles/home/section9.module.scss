@@ -1,0 +1,130 @@
+.section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #edf0fb;
+  padding-bottom: 6rem;
+
+  h2 {
+    padding-top: 4rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.875rem;
+    line-height: 1.2rem;
+    color: #3c3f48;
+  }
+  h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+    color: #1e1e1e;
+    text-align: center;
+  }
+}
+
+.details {
+  padding: 0.5rem 1.8125rem;
+  width: 100%;
+  max-width: calc(100vw - 30rem);
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.8125rem;
+      color: #16161d;
+    }
+    .icon {
+      transition: all 1s ease-in;
+    }
+  }
+  .body {
+    transition: all 10s ease-in;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+
+    color: rgba(22, 22, 29, 0.72);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .section {
+    padding-bottom: 3rem;
+
+    h2 {
+      padding-top: 3rem;
+      font-size: 2.2rem;
+      line-height: 1.2rem;
+    }
+    h4 {
+      font-size: 1.8rem;
+      line-height: 1.3rem;
+    }
+  }
+  .details {
+    width: 100%;
+    max-width: calc(100vw - 3rem);
+
+    .body {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+
+    .summary {
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+//font sizes for mobile
+@media only screen and (max-width: 500px) {
+  .section {
+    h2 {
+      padding-top: 1.5rem;
+      font-size: 2rem;
+      line-height: 1.2rem;
+    }
+    h4 {
+      font-size: 1.4rem;
+      line-height: 1.5rem;
+    }
+  }
+  .details {
+    padding: 0.1rem 1rem;
+    // width: 100%;
+    // max-width: calc(100vw - 30rem);
+    // margin: 0 auto;
+    // background: #ffffff;
+    // border-radius: 1rem;
+    // margin-top: 1rem;
+    .summary {
+      // display: flex;
+      // justify-content: space-between;
+      // cursor: pointer;
+      p {
+        // font-style: normal;
+        // font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.1rem;
+        // color: #16161d;
+      }
+    }
+    .body {
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
+  }
+}
