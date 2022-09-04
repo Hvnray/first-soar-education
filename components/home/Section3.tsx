@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../styles/home/Section3.module.scss";
+import styles from "../../styles/home/section3.module.scss";
 
 const Section3 = () => {
   return (
