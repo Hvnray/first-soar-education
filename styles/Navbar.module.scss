@@ -29,6 +29,9 @@
   top: 0;
   z-index: 1;
   box-shadow: 0rem 0.8125rem 1.1875rem rgb(0 0 0 / 7%);
+  .logo{
+    cursor: pointer;
+  }
   button,
   .mobileMenu {
     display: none;

@@ -1,0 +1,143 @@
+.section {
+  // display: flex;
+  width: 100%;
+  // justify-content: space-between;
+  max-width: 100%;
+  // margin: 0 auto;
+  // margin-bottom: 2rem;
+  // margin-top: 4rem;
+  // flex-direction: column;
+  // justify-content: center;
+  // text-align: left;
+  // Increase the padding on smaller screen 0 6rem
+  padding: 0 6rem;
+
+  // color: white;
+  // background-image: linear-gradient(
+  //     270deg,
+  //     rgba(0, 0, 0, 0.38) 45.31%,
+  //     rgba(0, 0, 0, 0.51) 75.14%
+  //   ),
+  //   url("/choosing-philippines-bg.svg");
+  // background-repeat: repeat, no-repeat;
+  // background-size: cover, cover;
+  .header {
+    // padding: 1rem 18rem;
+    margin-left: 5rem;
+
+    h1 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      text-align: left;
+      /* identical to box height, or 124% */
+
+      text-transform: capitalize;
+
+      color: #1140e7;
+    }
+
+    // padding: 2rem 10rem 1rem;
+  }
+
+  .body {
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      li {
+        display: block;
+        width: 21%;
+        background: #ffffff;
+        border: 0.125rem solid rgba(62, 59, 59, 0.22);
+        border-radius: 1rem;
+        margin: 1rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.625rem;
+        line-height: 2.125rem;
+        text-transform: capitalize;
+
+        color: #3c3f48;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .section {
+    .body {
+      ul {
+        justify-content: space-evenly;
+        li {
+          width: 46%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .section {
+    padding: 0 1rem;
+    .header {
+    // padding: 1rem 18rem;
+    margin-left: 1rem;
+
+    h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+      text-align: left;
+    }
+
+    // padding: 2rem 10rem 1rem;
+  }
+    .body {
+      ul {
+        justify-content: space-evenly;
+        li {
+          width: 85%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//font sizes for mobile
+@media only screen and (max-width: 500px) {
+  .section {
+    padding: 0;
+    .header {
+    // padding: 1rem 18rem;
+    margin-left: 1rem;
+
+    h1 {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    // padding: 2rem 10rem 1rem;
+  }
+    .body {
+      ul {
+        justify-content: space-evenly;
+        li {
+          width: 85%;
+          padding: 0.8rem;
+          font-size: 1.25rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}

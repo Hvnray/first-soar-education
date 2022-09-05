@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, forwardRef } from "react";
 import styles from "../styles/Navbar.module.scss";
 import cn from "classnames";
 import { mobileMenuSocials } from "../utils";
@@ -60,13 +60,17 @@ const Navbar = () => {
           [styles.menuOpened]: open || navHasScroll,
         })}
       >
-        <Image
-          className={styles.logo}
-          src={logo}
-          alt="Vercel Logo"
-          width={185}
-          height={60}
-        />
+        <Link href={"/"}>
+          <>
+            <Image
+              className={styles.logo}
+              src={logo}
+              alt="Vercel Logo"
+              width={185}
+              height={60}
+            />
+          </>
+        </Link>
         <button
           name="menubutton"
           className={cn({
@@ -84,8 +88,8 @@ const Navbar = () => {
         </nav>
         {open && (
           <div className={styles.mobileMenu}>
-            <a href="#">Home</a>
-            <a href="#">Why Choose Philippines</a>
+            <Link href="/">Home</Link>
+            <Link href="/choosing-philippines">Why Choose Philippines</Link>
             <a href="#">Study Medicine In Philippines</a>
             <Link href="#">Enquiry</Link>
             <Link href="#">FAQs</Link>

@@ -1,0 +1,150 @@
+.section {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 0 6rem;
+
+  .header {
+    width: 100%;
+    margin-left: 5rem;
+
+    h1 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      text-align: left;
+      text-transform: capitalize;
+      color: #1140e7;
+    }
+  }
+
+  .body {
+    width: 100%;
+
+    .images {
+      display: flex;
+      margin: 0 auto;
+      justify-content: flex-start;
+
+      & .img {
+        margin-left: 2rem;
+      }
+    }
+
+    .texts {
+      p {
+        padding: 0 2rem 1rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.75rem;
+        line-height: 150%;
+        color: #3e3b3b;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+
+      ul {
+        margin-left: 1rem;
+
+        li {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.625rem;
+          line-height: 2.125rem;
+          text-transform: capitalize;
+          color: #3c3f48;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .section {
+    .header {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .section {
+    padding: 0 1rem;
+
+    .header {
+      margin-left: 1rem;
+
+      h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: left;
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      flex-direction: column;
+
+      .texts {
+        order: 1;
+      }
+
+      .images {
+        order: 2;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .img {
+          margin-bottom: 1rem;
+          margin-left: 0;
+        }
+      }
+
+      ul {
+        justify-content: space-evenly;
+
+        li {
+          width: 85%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//font sizes for mobile
+@media only screen and (max-width: 500px) {
+  .section {
+    padding: 0;
+
+    .header {
+      // padding: 1rem 18rem;
+      margin-left: 1rem;
+
+      h1 {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+
+      // padding: 2rem 10rem 1rem;
+    }
+
+    .body {
+      ul {
+        justify-content: space-evenly;
+
+        li {
+          width: 85%;
+          padding: 0.8rem;
+          font-size: 1.25rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}

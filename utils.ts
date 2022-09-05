@@ -1,8 +1,23 @@
+import type { NextComponentType  } from 'next'
+import type { NextPage } from "next";
+import { AppProps } from 'next/app';
+
 const FirstSoarEducation = "First Soar Education";
+
 const FaceBook = "Facebook Account";
 const Instagram = "Instagram Account";
 const Twitter = "Facebook Twitter";
 
+interface PageExtender{
+  title: string
+}
+//Add custom appProp type then use union to add it
+export type CustomAppProps = AppProps & {
+  Component: NextComponentType & PageExtender // add auth type
+}
+
+
+export type CustomPageProps = NextPage & PageExtender;
 
 export const info = [
   {
@@ -86,7 +101,7 @@ export const meetTheTeam = [
     name: "Doctor Chigozie",
   },
   {
-    image: "/section8/doctorChigozie.svg",
+    image: "/section8/danielAka.svg",
     name: "Daniel Aka",
   },
 ];
@@ -179,4 +194,22 @@ export const mobileMenuSocials = [
     image: "/navbar/twitter.svg",
     alt: `${FirstSoarEducation} ${Twitter}`,
   },
+];
+
+export const degreesInPhillipines = [
+  "Nursing",
+  "Business Administration",
+  "Medicine",
+  "Dentistry",
+  "Engineering",
+  "Computer Science",
+  "Psychology",
+  "Biological Sciences",
+  "medical Technology",
+  "Education",
+  "Literature",
+  "Architecture",
+  "Public Health",
+  "Hospital Management",
+  "Public Administration",
 ];

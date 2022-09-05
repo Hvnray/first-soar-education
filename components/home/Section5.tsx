@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../../styles/home/section5.module.scss";
 
 const Section5 = () => {
@@ -20,7 +21,7 @@ const Section5 = () => {
           dreams to become a Medical Doctor. Philippines is the best affordable
           country you can study medicine.
         </p>
-        <button>Read More</button>
+        <Link href={'/choosing-philippines'}>Read More</Link>
       </div>
     </section>
   );
