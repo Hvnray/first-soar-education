@@ -123,7 +123,6 @@
     padding: 0;
 
     .header {
-      // padding: 1rem 18rem;
       margin-left: 1rem;
 
       h1 {
@@ -131,20 +130,33 @@
         line-height: 1.8rem;
       }
 
-      // padding: 2rem 10rem 1rem;
     }
 
     .body {
-      ul {
-        justify-content: space-evenly;
+      .images {
 
-        li {
-          width: 85%;
-          padding: 0.8rem;
-          font-size: 1.25rem;
-          line-height: 2rem;
+        .img {
+          padding: 0 1rem;
+          // margin-left: 0;
         }
       }
+      .texts {
+        p {
+          font-size: 1.25rem;
+          line-height: 140%;
+        }
+        ul {
+          li {
+            padding: 0.8rem;
+            font-size: 1.25rem;
+            line-height: 140%;
+            &:last-of-type {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+
     }
   }
 }

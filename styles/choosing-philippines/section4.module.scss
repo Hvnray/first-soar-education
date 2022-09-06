@@ -51,9 +51,9 @@
 }
 
 @media only screen and (max-width: 1500px) {
-  .section{
+  .section {
     .body {
-      .images{
+      .images {
         width: 80%;
       }
     }
@@ -61,21 +61,23 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .section{
+  .section {
     .body {
-      .images{
+      .images {
         width: 90%;
       }
     }
   }
 }
+
 @media only screen and (max-width: 800px) {
   .section {
     padding: 0 1rem;
 
     .header {
       // padding: 1rem 18rem;
-      margin-left: 1rem;
+      margin-left: 0rem;
+      padding-left: 1rem;
 
       h1 {
         font-size: 2rem;
@@ -86,15 +88,8 @@
     }
 
     .body {
-      // display: flex;
-      // flex-wrap: wrap-reverse;
-      // flex-direction: column;
-
-      .texts {
-        // order: 1;
-      }
-
       .images {
+        width: 100%;
         .img {
           margin-bottom: 1rem;
           margin-left: 0;
@@ -114,6 +109,15 @@
       h1 {
         font-size: 1.4rem;
         line-height: 1.8rem;
+      }
+    }
+
+    .body {
+      a {
+        padding: 0.8rem 1rem;
+        font-size: 1.25rem;
+        line-height: 120%;
+
       }
     }
   }
