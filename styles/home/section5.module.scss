@@ -23,19 +23,19 @@
     }
     p {
       font-weight: 400;
-      font-size: 1.75rem;
-      line-height: 130%;
+      font-size: 1.5rem;
+      line-height: 140%;
       color: #16161d;
     }
     a {
       font-weight: 400;
-      font-size: 1.625rem;
-      line-height: 1.5rem;
+      font-size: 1.5rem;
+      line-height: 150%;
       text-transform: capitalize;
 
       color: var(--primary-color);
       background-color: #fff;
-      padding: 0.9375rem;
+      padding: 0.8rem;
       border: 0.125rem solid var(--primary-color);
       border-radius: 0.5rem;
 
@@ -103,11 +103,17 @@
         line-height: 1.2rem;
         padding: 0.5rem;
       }
-      p {
-        font-size: 1.5rem;
-        line-height: 110%;
+      p{
+        font-size: 1.2rem;
+        line-height: 150%;
         margin: 2rem auto;
         padding: 0 1.2rem;
+      }
+      a{
+        font-size: 1.2rem;
+        line-height: 150%;
+        padding: 0.5rem;
+
       }
       .hOne {
         h1 {

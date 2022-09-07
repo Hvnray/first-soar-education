@@ -12,8 +12,9 @@ const Section6 = () => {
             <Image
               src={b.image}
               alt={`Photo of ${b.name}`}
-              width={114}
-              height={114}
+              width={100}
+              height={100}
+              priority
             />
             <h3>{b.name}</h3>
             <div className={styles.divider} />

@@ -11,7 +11,7 @@ const Section1 = () => {
             We are always happy to consult and guide you on every process to
             study in the Philippines.
           </h2>
-          <Link href={"#"}>Read more...</Link>
+          <Link href="/choosing-philippines">Read more...</Link>
           <button>Register Now {"  "}&#8594;</button>
         </div>
         <div className={styles.photoArea}>
@@ -22,6 +22,7 @@ const Section1 = () => {
                 alt="Vercel Logo"
                 width={188}
                 height={236}
+              priority
               />
             </div>
             <div className={styles.img}>
@@ -31,6 +32,7 @@ const Section1 = () => {
                 width={188}
                 height={290}
                 // className={styles.img}
+              priority
               />
             </div>
           </div>
@@ -42,6 +44,7 @@ const Section1 = () => {
                 width={295}
                 height={224}
                 className={styles.img}
+              priority
               />
             </div>
 
@@ -52,6 +55,7 @@ const Section1 = () => {
                 width={295}
                 height={196}
                 className={styles.img}
+              priority
               />
             </div>
 
@@ -62,6 +66,7 @@ const Section1 = () => {
                 width={295}
                 height={181}
                 className={styles.img}
+              priority
               />
             </div>
           </div>

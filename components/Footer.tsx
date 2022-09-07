@@ -20,7 +20,7 @@ const Footer = () => {
         {SocialMedia.map((b, i) => (
           <li key={i}>
             <a href={b.url}>
-              <Image src={b.logo} alt={b.name} width={65} height={65} />
+              <Image src={b.logo} alt={b.name} width={65} height={65}  priority/>
             </a>
           </li>
         ))}

@@ -89,6 +89,21 @@ export const studentsFeedBack = [
     message:
       "I am a second year pharmacy student at a higher institution in the Philippines. Philippines is one of the best place to study. Good tropical weather, affordable tuition fees, friendly and healthy learning environment with lecturers who are professionals willing and ready to invest in the life of students. I am happy I chose Philippines.",
   },
+  {
+    image:'/section6/doctorIjeoma.svg',
+    name:'Doctor Ijeoma',
+    message:'I am a 1st year medical resident in family medicine in Minnesota USA. I graduated from medical school in the Philippines. It is the best and most affordable place to earn a medical degree with a good highly structured health education.',
+  },
+  {
+    image:'/section6/egnrValerie.svg',
+    name:'Egnr. Valerie',
+    message:'Studying engineering in the Philippines was made easy for me because most theories were practicality with quality and functional equipments. I’m a graduate currently running a franchise of General Safety and Engineering Firm and processing my Masters in the UK.',
+  },
+  {
+    image:'/section6/sharonArinze.svg',
+    name:'Sharon Arinze',
+    message:'Philippines is a country I explored so well. I received quality training and with my knowledge on Psychology which I studied there, I’ve been able to work with many patients with mental and developmental disabilities, it feels good serving the society. ',
+  },
 ];
 
 export const meetTheTeam = [
@@ -161,19 +176,19 @@ export const footerNavLinks = [
     name: "Home",
   },
   {
-    route: "/",
+    route: "/medicine",
     name: "Study Medicine",
   },
   {
-    route: "/",
+    route: "/choosing-philippines",
     name: "Explore Philippines",
   },
   {
-    route: "/",
+    route: "/#FAQS",
     name: "FAQs",
   },
   {
-    route: "/",
+    route: "/contact-us",
     name: "Contact Us",
   },
 ];

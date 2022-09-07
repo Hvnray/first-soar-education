@@ -10,7 +10,8 @@ const Section2 = () => {
           alt="Manila Graphic"
           width={505}
           height={278}
-        />
+          priority
+          />
       </div>
       <div className={styles.textSection}>
         <h1>we bring you the right connections From the Philippines</h1>

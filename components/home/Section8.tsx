@@ -15,7 +15,7 @@ const Section8 = () => {
         {meetTheTeam.map((b, i) => (
           <div className={styles.info} key={i}>
             <div className={styles.img}>
-              <Image src={b.image} alt={b.name} width={180} height={180} />
+              <Image src={b.image} alt={b.name} width={180} height={180} priority />
             </div>
             <p className={styles.title}>{b.name}</p>
           </div>

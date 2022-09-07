@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, forwardRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from "../styles/Navbar.module.scss";
 import cn from "classnames";
 import { mobileMenuSocials } from "../utils";
 import { useNavbarObserver } from "../customHooks";
+import { useRouter } from "next/router";
 
 type Logos = "/logo.svg" | "/logo_white.svg";
 
@@ -12,6 +13,39 @@ const Navbar = () => {
   const [open, SetOpen] = useState(false);
   const [logo, SetLogo] = useState<Logos>("/logo.svg");
   const [navHasScroll, SetNavHasScroll] = useState(false);
+  const [scrollOnAbout, setscrollOnAbout] = useState(false);
+  const [curentPageMedicine, setCurentPageMedicine] = useState(false);
+  const [curentPageHome, setCurentPageHome] = useState(false);
+  const [curentPageContactUs, setCurentPageContactUs] = useState(false);
+  let aboutPage = useRef<HTMLElement | null>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.pathname === "/medicine") {
+      setCurentPageMedicine(true);
+      console.log("medicine yes");
+    } else {
+      console.log("medicine no");
+      setCurentPageMedicine(false);
+    }
+    if (router.pathname === "/" && !scrollOnAbout) {
+      console.log("home -no about yes");
+      setCurentPageHome(true);
+    } else if (router.pathname === "/" && scrollOnAbout){
+      console.log("home -no about no");
+      setCurentPageHome(false);
+    }
+    if (router.pathname === "/contact-us") {
+      console.log("contact-us yes");
+      setCurentPageContactUs(true);
+    } else {
+      console.log("contact-us no");
+
+      setCurentPageContactUs(false);
+    }
+    console.log("router", router);
+  }, [router, scrollOnAbout]);
+
   const windowSize = useNavbarObserver();
 
   const handleMenuClick = (
@@ -23,9 +57,20 @@ const Navbar = () => {
 
   const windowOnScroll = () => {
     SetNavHasScroll(window.scrollY > 30 ? true : false);
+    if (aboutPage.current) {
+      const topPosition = aboutPage.current.offsetTop - 3; //subtract 5 to handle edge case
+      const bottomPosition =
+        aboutPage.current.offsetTop + aboutPage.current.offsetHeight - 5; //subtract 5 to handle edge case
+      if (window.scrollY > topPosition && window.scrollY < bottomPosition) {
+        setscrollOnAbout(true);
+      } else {
+        setscrollOnAbout(false);
+      }
+    }
   };
 
   useEffect(() => {
+    aboutPage.current = document.getElementById("about-us");
     if (window) {
       window.addEventListener("scroll", windowOnScroll);
     }
@@ -52,6 +97,7 @@ const Navbar = () => {
       }
     }
   }, [open, navHasScroll, windowSize]);
+
   return (
     <div className={styles.container}>
       <header
@@ -60,7 +106,7 @@ const Navbar = () => {
           [styles.menuOpened]: open || navHasScroll,
         })}
       >
-        <Link href={"/"}>
+        <Link href="/" passHref>
           <>
             <Image
               className={styles.logo}
@@ -68,6 +114,7 @@ const Navbar = () => {
               alt="Vercel Logo"
               width={185}
               height={60}
+              priority
             />
           </>
         </Link>
@@ -81,18 +128,38 @@ const Navbar = () => {
         ></button>
 
         <nav>
-          <a href="#">Home</a>
-          <a href="#">Medicine</a>
-          <a href="#">About Us</a>
-          <Link href="#">Contact Us</Link>
+          <Link
+            href="/"
+            className={curentPageHome ? styles.isCurrent : undefined}
+          >
+            Home
+          </Link>
+          <Link
+            href="/medicine"
+            className={curentPageMedicine ? styles.isCurrent : undefined}
+          >
+            Medicine
+          </Link>
+          <Link
+            href="/#about-us"
+            className={scrollOnAbout ? styles.isCurrent : undefined}
+          >
+            About Us
+          </Link>
+          <Link
+            href="/contact-us"
+            className={curentPageContactUs ? styles.isCurrent : undefined}
+          >
+            Contact Us
+          </Link>
         </nav>
         {open && (
-          <div className={styles.mobileMenu}>
+          <div className={styles.mobileMenu} onClick={() => SetOpen(false)}>
             <Link href="/">Home</Link>
             <Link href="/choosing-philippines">Why Choose Philippines</Link>
-            <a href="#">Study Medicine In Philippines</a>
-            <Link href="#">Enquiry</Link>
-            <Link href="#">FAQs</Link>
+            <Link href="/medicine">Study Medicine In Philippines</Link>
+            <Link href="/contact-us">Enquiry</Link>
+            <Link href="/#FAQS">FAQs</Link>
             <div className={styles.mobileMenuSocials}>
               <ul>
                 {mobileMenuSocials.map((b, i) => (

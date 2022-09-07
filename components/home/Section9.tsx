@@ -30,7 +30,7 @@ const Details = ({ title, body }: DetailsParams) => {
     <div className={styles.details}>
       <div className={styles.summary} onClick={onChange}>
         <p>{title}</p>
-        <Image src={iconUrl[0]} alt={iconUrl[1]} width={60} height={60} />
+        <Image src={iconUrl[0]} alt={iconUrl[1]} width={60} height={60} priority />
       </div>
       {isOpen && <p className={styles.body}>{body}</p>}
     </div>
@@ -39,7 +39,7 @@ const Details = ({ title, body }: DetailsParams) => {
 
 const Section9 = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="FAQS">
       <h2>FAQ</h2>
       <h4>Frequently Asked Questions</h4>
       {FAQ.map((b, i) => (

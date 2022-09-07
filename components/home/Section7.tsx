@@ -3,7 +3,7 @@ import styles from "../../styles/home/section7.module.scss";
 
 const Section7 = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="about-us">
       <h2>About Us</h2>
       <p>
         First Soar Education guides you through every step of process to study
@@ -18,7 +18,7 @@ const Section7 = () => {
         experiences, knowing that we are in their corner at all times.
       </p>
       <div>
-        <Image src="/ourMission.svg" alt="Our Mission Logo" width={60} height={60} />
+        <Image src="/ourMission.svg" alt="Our Mission Logo" width={60} height={60} priority />
         <h3>Our Mission</h3>
       </div>
       <p>

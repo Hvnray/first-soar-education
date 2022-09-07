@@ -48,6 +48,11 @@
         color: var(--primary-color);
         border-bottom: 0.125rem solid var(--primary-color);
       }
+      &.isCurrent{
+        color: var(--primary-color);
+        border-bottom: 0.125rem solid var(--primary-color);
+  
+      }
     }
   }
 }

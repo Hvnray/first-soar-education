@@ -34,7 +34,7 @@ const Section4 = () => {
         {info.map((b, i) => (
           <div className={styles.info} key={i}>
             <div className={styles.img}>
-              <Image src={b.image} alt={b.imageAlt} width={size} height={size} />
+              <Image src={b.image} alt={b.imageAlt} width={size} height={size} priority />
             </div>
             <p className={styles.title}>{b.title}</p>
             <p className={styles.text}>{b.text}</p>
