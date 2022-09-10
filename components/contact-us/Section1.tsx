@@ -2,7 +2,7 @@ import Image from "next/image";
 import { MouseEventHandler, useState } from "react";
 import styles from "../../styles/contact-us/section1.module.scss";
 import { contactUsSocialMedia } from "../../utils";
-import cn from 'classnames'
+import cn from "classnames";
 
 const Section1 = () => {
   const [firstName, setfirstName] = useState("");
@@ -12,6 +12,8 @@ const Section1 = () => {
   const [phone, setphone] = useState("");
   const [email, setemail] = useState("");
   const [message, setmessage] = useState("");
+  const [submitting, setsubmitting] = useState(false);
+  const [submitted, setsubmitted] = useState(false);
   const formBlock = [
     {
       id: "firstName",
@@ -29,66 +31,105 @@ const Section1 = () => {
       placeholder: "",
       value: lastName,
       onTextChange: (e: React.ChangeEvent<HTMLInputElement>) =>
-      setlastName(e.target.value),
+        setlastName(e.target.value),
     },
     {
       id: "educationalLevel",
       label: "Educational Level",
       type: "select",
       placeholder: "",
-      value:educationalLevel,
+      value: educationalLevel,
       onSelectChange: (e: React.ChangeEvent<HTMLSelectElement>) =>
-      seteducationalLevel(e.target.value),
+        seteducationalLevel(e.target.value),
     },
     {
       id: "course",
       label: "Course",
       type: "text",
       placeholder: "Enter your course of choice",
-      value:course,
+      value: course,
       onTextChange: (e: React.ChangeEvent<HTMLInputElement>) =>
-      setcourse(e.target.value),
+        setcourse(e.target.value),
     },
     {
       id: "phoneNumber",
       label: "Phone Number",
       type: "tel",
       placeholder: "+234 810 000 0000",
-      value:phone,
+      value: phone,
       onTextChange: (e: React.ChangeEvent<HTMLInputElement>) =>
-      setphone(e.target.value),
+        setphone(e.target.value),
     },
     {
       id: "mail",
       label: "Mail",
       type: "email",
       placeholder: "yourmail@gmail.com",
-      value:email,
+      value: email,
       onTextChange: (e: React.ChangeEvent<HTMLInputElement>) =>
-      setemail(e.target.value),
+        setemail(e.target.value),
     },
     {
       id: "message",
       label: "Message",
       type: "textarea",
       placeholder: "Write your message",
-      value:message,
+      value: message,
       onTextareaChange: (e: React.ChangeEvent<HTMLTextAreaElement>) =>
-      setmessage(e.target.value),
+        setmessage(e.target.value),
     },
   ];
   function sendButtonClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    // if()
-    e.preventDefault();
-    // console.table({
-    //   firstName,
-    //   lastName,
-    //   educationalLevel,
-    //   course,
-    //   phone,
-    //   email,
-    //   message,
-    // })
+    if (
+      firstName != "" &&
+      lastName != "" &&
+      educationalLevel != "" &&
+      course != "" &&
+      phone != "" &&
+      email != "" &&
+      message != ""
+    ) {
+      e.preventDefault();
+      setsubmitting(true);
+      const data = {
+        firstName,
+        lastName,
+        educationalLevel,
+        course,
+        phone,
+        email,
+        message,
+      };
+      console.table(data);
+      fetch("/api/contact-us", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => {
+          console.log("Response received", res);
+          if (res.status === 200) {
+            console.log("Response succeeded!");
+            setsubmitting(false);
+            setsubmitted(true);
+            setfirstName("");
+            setlastName("");
+            seteducationalLevel("");
+            setphone("");
+            setcourse("");
+            setemail("");
+            setmessage("");
+          }
+        })
+        .catch((reason) => {
+          console.log("Failed");
+          console.log(reason);
+        });
+      return;
+    }
   }
   return (
     <section className={styles.section}>
@@ -129,7 +170,10 @@ const Section1 = () => {
         <form>
           {formBlock.map((b, i) =>
             b.type === "textarea" ? (
-              <div className={cn([styles.custonInputs,styles.textarea])} key={i}>
+              <div
+                className={cn([styles.custonInputs, styles.textarea])}
+                key={i}
+              >
                 <label htmlFor={b.id}>{b.label}</label>
                 <textarea
                   value={b.value}
@@ -184,7 +228,9 @@ const Section1 = () => {
               FSE will not share your details with others without your
               permission.
             </p>
-            <button onClick={sendButtonClick}>Send</button>
+            <button disabled={submitting} onClick={sendButtonClick}>
+              Send
+            </button>
           </div>
         </form>
       </section>
