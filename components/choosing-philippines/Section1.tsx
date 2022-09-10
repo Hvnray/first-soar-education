@@ -19,7 +19,7 @@ const Section1 = () => {
           the Philippines?
         </h2>
       </div>
-      <Link href={"#"}>Contact Us &#8594;</Link>
+      <Link href={"#"}>Contact Us</Link>
     </section>
   );
 };

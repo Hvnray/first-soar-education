@@ -12,7 +12,7 @@ const Section1 = () => {
             study in the Philippines.
           </h2>
           <Link href="/choosing-philippines">Read more...</Link>
-          <button>Register Now {"  "}&#8594;</button>
+          <button>Register Now</button>
         </div>
         <div className={styles.photoArea}>
           <div className={styles.portraits}>

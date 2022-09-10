@@ -20,31 +20,36 @@ const Navbar = () => {
   let aboutPage = useRef<HTMLElement | null>(null);
   const router = useRouter();
 
-  useEffect(() => {
-    if (router.pathname === "/medicine") {
-      setCurentPageMedicine(true);
-      console.log("medicine yes");
-    } else {
-      console.log("medicine no");
-      setCurentPageMedicine(false);
-    }
-    if (router.pathname === "/" && !scrollOnAbout) {
-      console.log("home -no about yes");
-      setCurentPageHome(true);
-    } else if (router.pathname === "/" && scrollOnAbout){
-      console.log("home -no about no");
-      setCurentPageHome(false);
-    }
-    if (router.pathname === "/contact-us") {
-      console.log("contact-us yes");
-      setCurentPageContactUs(true);
-    } else {
-      console.log("contact-us no");
+  // useEffect(() => {
+  //   const reloadRoute = () => {
+  //     if (router.pathname == "/medicine") {
+  //       setCurentPageMedicine(true);
+  //       console.log("medicine yes");
+  //     } else {
+  //       console.log("medicine no");
+  //       setCurentPageMedicine(false);
+  //     }
+  //     if (router.pathname === "/" && !scrollOnAbout) {
+  //       console.log("home -no about yes");
+  //       setCurentPageHome(true);
+  //       setscrollOnAbout(false);
+  //     } else if (router.pathname === "/" && scrollOnAbout) {
+  //       console.log("home -no about no");
+  //       setscrollOnAbout(true);
+  //       setCurentPageHome(false);
+  //     }
+  //     if (router.pathname === "/contact-us") {
+  //       console.log("contact-us yes");
+  //       setCurentPageContactUs(true);
+  //     } else {
+  //       console.log("contact-us no");
 
-      setCurentPageContactUs(false);
-    }
-    console.log("router", router);
-  }, [router, scrollOnAbout]);
+  //       setCurentPageContactUs(false);
+  //     }
+  //     console.log("router", router);
+  //   };
+  //   reloadRoute();
+  // }, [router, router.pathname, scrollOnAbout]);
 
   const windowSize = useNavbarObserver();
 
@@ -130,7 +135,9 @@ const Navbar = () => {
         <nav>
           <Link
             href="/"
-            className={curentPageHome ? styles.isCurrent : undefined}
+            className={cn({
+              [styles.isCurrent]: curentPageHome,
+            })}
           >
             Home
           </Link>

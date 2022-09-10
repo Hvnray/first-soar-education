@@ -31,7 +31,7 @@ const Section3 = () => {
         </section>
         <section className={styles.texts}>
           <p>
-            This beautiful country is made up of over 7,107 Island, which makes
+            This beautiful country is made up of over 7,107 Islands, which makes
             up big and small cities. It is surrounded by the Pacific Ocean to
             the West, Bash Channel to the North, The Lulu and Celebs Seas to the
             South. Offering a completely new experience to students.

@@ -11,10 +11,9 @@ const Section3 = () => {
           committed to provide easy and stress-free process for your study
           abroad with no consultation fee.
         </p>
-        <button className={styles.connect}>Connect With Us {"  "}&#8594;</button>
+        <button className={styles.connect}>Connect With Us</button>
       </div>
       <div className={styles.photoArea}>
-      {/* <button className={styles.connect}>Connect With Us {"  "}&#8594;</button> */}
         <Image className={styles.image} src="/image7.svg" alt="Vercel Logo" width={503} height={567} priority />
       </div>
     </section>

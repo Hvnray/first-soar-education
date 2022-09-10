@@ -1,0 +1,110 @@
+.section {
+  width: 100%;
+  max-width: 100%;
+
+  .body {
+    padding-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      text-align: center;
+      text-transform: capitalize;
+      font-style: normal;
+      line-height: 150%;
+      font-size: 1.75rem;
+      margin-block: 0.5rem;
+      color: #3E3B3B;
+
+      &.highlight {
+        color: #1140e7;
+        font-weight: 400;
+        // font-size: 1.75rem;
+
+      }
+    }
+
+    a {
+      // display: inline-block;
+      // margin: 0 auto;
+      width: fit-content;
+      text-align: center;
+      background: #1140e7;
+      border-radius: .5rem;
+      padding: 0.8rem;
+      color: white;
+      margin: 1rem auto 2rem;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.625rem;
+      line-height: 1.5rem;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .section {
+    .body {}
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .section {
+    .body {}
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .section {
+    padding: 0 1rem;
+
+    .body {
+      .img {
+        width: 94%;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+//font sizes for mobile
+@media only screen and (max-width: 500px) {
+  .section {
+    padding: 0;
+
+    .body {
+      .img {
+        // width: 94%;
+        display: none;
+      }
+
+      p {
+        font-size: 1.2rem;
+
+        &.highlight {
+          background-image: linear-gradient(270deg,
+              rgba(0, 0, 0, 0.30) 45.31%,
+              rgba(0, 0, 0, 0.40) 75.14%), url('/medicine-footer-banner2.svg');
+          height: 28.875rem;
+          max-width: 21.3125rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: white;
+          display: flex;
+          align-items: flex-end;
+
+          &::after {
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+  }
+}

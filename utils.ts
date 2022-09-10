@@ -169,7 +169,23 @@ export const SocialMedia = [
     name: `${FirstSoarEducation} ${Twitter}`,
   },
 ];
-
+export const contactUsSocialMedia = [
+  {
+    url: "www.instagram.com",
+    logo: "/contact-us/instagram.svg",
+    name: `${FirstSoarEducation} ${Instagram}`,
+  },
+  {
+    url: "www.facebook.com",
+    logo: "/contact-us/facebook.svg",
+    name: `${FirstSoarEducation} ${FaceBook}`,
+  },
+  {
+    url: "www.twitter.com",
+    logo: "/contact-us/twitter.svg",
+    name: `${FirstSoarEducation} ${Twitter}`,
+  },
+];
 export const footerNavLinks = [
   {
     route: "/",
@@ -227,4 +243,5 @@ export const degreesInPhillipines = [
   "Public Health",
   "Hospital Management",
   "Public Administration",
+  "Pharmacy"
 ];
