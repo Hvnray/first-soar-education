@@ -42,7 +42,8 @@
       background-color: #000000;
       border-radius: 0.875rem;
       color: var(--white-color);
-      width: 33%;
+      min-width: 33%;
+      max-width: 40%;
       padding: 2rem;
 
       h2 {
