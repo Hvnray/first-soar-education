@@ -11,31 +11,26 @@ const Section1 = () => {
   const imgs = [
     {
       src: Image1,
-      // src: "/image1.svg",
       alt: "girl graduating from a school in Philippines",
       size: [188, 236],
     },
     {
       src: Image2,
-      // src: "/image2.svg",
       alt: "Nigerian girl graduating from medical school in Philippines",
       size: [188, 290],
     },
     {
       src: Image3,
-      // src: "/image3.svg",
       alt: "Boy with dreadlock smiling",
       size: [295, 224],
     },
     {
       src: Image4,
-      // src: "/image4.svg",
       alt: "Group of students colaborating",
       size: [295, 196],
     },
     {
       src: Image5,
-      // src: "/image5.svg",
       alt: "Photo of a School auditorium",
       size: [295, 181],
     },
@@ -60,8 +55,6 @@ const Section1 = () => {
               <Image
                 src={b.src}
                 alt={b.alt}
-                // width={b.size[0]}
-                // height={b.size[1]}
                 priority
                 quality={100}
               />
@@ -74,8 +67,6 @@ const Section1 = () => {
               <Image
                 src={b.src}
                 alt={b.alt}
-                // width={b.size[0]}
-                // height={b.size[1]}
                 priority
               />
             </div>

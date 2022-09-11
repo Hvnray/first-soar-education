@@ -20,8 +20,6 @@ const Section4 = () => {
               <Image
                 src={b.image}
                 alt={b.imageAlt}
-                // width={size}
-                // height={size}
                 quality={100}
                 priority
               />

@@ -30,8 +30,6 @@ const Section3 = () => {
               <Image
                 src={b.image}
                 alt={b.alt}
-                // width={400}
-                // height={274}
                 priority
                 quality={100}
               />

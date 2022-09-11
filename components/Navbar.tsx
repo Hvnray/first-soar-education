@@ -26,7 +26,6 @@ const Navbar = () => {
   const [curentPageContactUs, setCurentPageContactUs] = useState(false);
 
   useEffect(() => {
-    // console.log('router.pathname',router.pathname)
     if (router.pathname == "/" && !currentPageAbout) {
       setCurentPageHome(true);
       setCurentPageMedicine(false);
@@ -122,7 +121,6 @@ const Navbar = () => {
               className={styles.logo}
               src={logo}
               alt="Vercel Logo"
-              // width={185}
               height={60}
               quality={100}
               priority
@@ -181,8 +179,6 @@ const Navbar = () => {
                         src={b.image}
                         alt={b.alt}
                         quality={100}
-                        // width={38}
-                        // height={38}
                       />
                     </a>
                   </li>

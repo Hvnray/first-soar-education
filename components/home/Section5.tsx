@@ -10,7 +10,6 @@ const Section5 = () => {
         <Image
           src={Image8}
           alt="Medical student holding her note book"
-          // width={358}
           height={538}
           quality={100}
           priority

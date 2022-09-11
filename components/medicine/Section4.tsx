@@ -12,8 +12,6 @@ const Section4 = () => {
             src={Img}
             alt={"photo group of medical students"}
             quality={100}
-            // width={1200}
-            // height={320}
             priority
           />
         </div>

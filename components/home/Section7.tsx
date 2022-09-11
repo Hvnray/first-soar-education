@@ -22,8 +22,6 @@ const Section7 = () => {
         <Image
           src={ourMission}
           alt="Our Mission Logo"
-          // width={60}
-          //  height={60}
           quality={100}
           priority
         />

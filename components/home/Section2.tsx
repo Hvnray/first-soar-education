@@ -9,8 +9,6 @@ const Section2 = () => {
         <Image
           src={Image6}
           alt="Manila Graphic"
-          // width={505}
-          // height={278}
           layout="responsive"
           priority
           quality={100}
