@@ -32,8 +32,6 @@
     }
 
     a {
-      // display: inline-block;
-      // margin: 0 auto;
       width: fit-content;
       text-align: center;
       background: var(--primary-color);
@@ -75,7 +73,6 @@
     padding: 0 1rem;
 
     .header {
-      // padding: 1rem 18rem;
       margin-left: 0rem;
       padding-left: 1rem;
 
@@ -90,6 +87,7 @@
     .body {
       .images {
         width: 100%;
+
         .img {
           margin-bottom: 1rem;
           margin-left: 0;

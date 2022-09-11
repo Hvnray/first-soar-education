@@ -5,15 +5,11 @@
   max-width: 75%;
   margin: 0 auto;
   margin-bottom: 2rem;
-  // background-color: #fff;
-  // Increase the padding on smaller screen 0 6rem
   padding: 0 4rem;
+
   .textSection {
     width: 50%;
-    // height: 70vh;
-    // background-image: url("/studyInPhilippines.svg");
-    // background-size: contain;
-    // background-color: red;
+
     h1 {
       font-weight: 700;
       font-size: 3.8rem;
@@ -21,12 +17,14 @@
       text-transform: capitalize;
       color: #111111;
     }
+
     p {
       font-weight: 400;
       font-size: 1.5rem;
       line-height: 140%;
       color: #16161d;
     }
+
     a {
       font-weight: 400;
       font-size: 1.5rem;
@@ -46,6 +44,7 @@
       }
     }
   }
+
   .imageSection {
     margin: auto auto;
   }
@@ -57,18 +56,19 @@
     width: 100%;
     display: block;
     padding: 0;
+
     .textSection {
       width: 100%;
       text-align: center;
       padding-bottom: 3rem;
+
       p {
         margin: 3rem auto;
       }
+
       .hOne {
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.4)
-          ),
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)),
           url("/image8.svg");
         background-repeat: repeat, no-repeat;
         background-size: cover;
@@ -92,29 +92,33 @@
     display: none;
   }
 }
+
 //font sizes for mobile
 @media only screen and (max-width: 500px) {
   .section {
     .textSection {
       padding-bottom: 1rem;
+
       button {
         font-weight: 400;
         font-size: 1.4rem;
         line-height: 1.2rem;
         padding: 0.5rem;
       }
-      p{
+
+      p {
         font-size: 1.2rem;
         line-height: 150%;
         margin: 2rem auto;
         padding: 0 1.2rem;
       }
-      a{
+
+      a {
         font-size: 1.2rem;
         line-height: 150%;
-        // padding: 0.5rem;
 
       }
+
       .hOne {
         h1 {
           width: 100%;

@@ -1,16 +1,15 @@
-
 .section {
   display: flex;
   width: 85%;
   justify-content: space-between;
   max-width: 75%;
   margin: 0 auto;
-  // background-color: #fff;
-  // Increase the padding on smaller screen 0 6rem
   padding: 0 4rem;
+
   .textSection {
     width: 50%;
     margin-right: auto;
+
     h1 {
       font-weight: 700;
       font-size: 3.2rem;
@@ -18,6 +17,7 @@
       text-transform: capitalize;
       color: #111111;
     }
+
     p {
       font-weight: 400;
       font-size: 1.75rem;
@@ -25,6 +25,7 @@
       color: #16161D;
     }
   }
+
   .imageSection {
     margin: auto auto;
     width: 50%;
@@ -32,40 +33,48 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .section{
+  .section {
     padding: 0 3rem;
-  max-width: 100%;
-  width: 100%;
-  flex-wrap: wrap;
-  .textSection,.imageSection {
+    max-width: 100%;
     width: 100%;
-    text-align: center;
-    h1{
-      font-size: 2.2rem;
-    }
-    p{
-      font-size: 1.6rem;
+    flex-wrap: wrap;
 
+    .textSection,
+    .imageSection {
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+
+      }
     }
-  }
   }
 
 }
 
 //font sizes for mobile
 @media only screen and (max-width: 500px) {
-  .section{
+  .section {
     padding: 0 2rem;
-    .textSection,.imageSection {
+
+    .textSection,
+    .imageSection {
       width: 100%;
       text-align: center;
-      h1{
+
+      h1 {
         font-size: 1.6rem;
       }
-      p{
+
+      p {
         font-size: 1.2rem;
-  
+
       }
     }
-    }
+  }
 }

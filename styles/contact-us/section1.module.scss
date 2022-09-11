@@ -1,5 +1,4 @@
 .section {
-  // display: flex;
   background-color: var(--secondary-color);
   width: 100%;
   max-width: 100%;
@@ -38,7 +37,6 @@
     background-color: var(--white-color);
     border-radius: 1.125rem;
     display: flex;
-    // justify-content: space-between;
 
     .contactArea {
       background-color: #000000;
@@ -99,8 +97,6 @@
         }
       }
 
-      // }
-
     }
 
     form {
@@ -133,7 +129,6 @@
         select,
         textarea {
           font-family: "Montserrat", sans-serif;
-          // margin-top: 0.5rem;
           border: none;
           border-bottom: 0.125rem solid rgba(0, 0, 0, 0.29);
           width: 100%;
@@ -166,14 +161,11 @@
       }
 
       .end {
-        // padding-top: 1rem;
         width: 85%;
         display: flex;
         align-items: center;
 
         p {
-          // font-family: 'Inter';
-
           padding-left: 1rem;
           font-style: normal;
           font-weight: 400;
@@ -185,7 +177,6 @@
 
 
         button {
-          // width: 58%;
           background-color: var(--primary-color);
           border-radius: 0.5rem;
           padding: 0.8rem 5rem;
@@ -265,7 +256,6 @@
     }
 
     .card {
-      // padding: 0;
       padding: 0.5rem;
 
       .contactArea {
@@ -291,24 +281,18 @@
         }
 
         .socialMedia {
-          // margin-top: 4rem;
-
           a {
             padding: 0 0.3rem;
             margin-right: 1rem;
 
           }
         }
-
-        // }
-
       }
 
       form {
         padding: 1rem 0.5rem;
 
         .custonInputs {
-          // padding: 0.2rem;
           font-size: 1rem;
           line-height: 120%;
           min-width: 100%;

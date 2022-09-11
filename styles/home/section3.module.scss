@@ -2,32 +2,20 @@
   display: flex;
   width: 75%;
   justify-content: space-between;
-  // max-width: 75%;
-  // height: 60vh;
-  // min-height: 60vh;
   margin: 0 auto;
-  // background-image: url("/section3bg.svg");
-  // background-repeat: no-repeat;
-  // background-position: 100% 100%;
-  // background-size: 30rem 30rem;
   margin-bottom: 1rem;
-  // Increase the padding on smaller screen 0 6rem
   padding: 0 4rem;
 
   .textArea {
     width: 50%;
     height: min-content;
-    // background-image: url("/studyInPhilippines.svg");
     background-size: contain;
 
-    // background-color: red;
     h1 {
       font-style: normal;
       font-weight: 700;
       font-size: 4.25rem;
-      line-height: 5rem;
-      /* or 118% */
-
+      line-height: 118%;
       text-transform: capitalize;
     }
 
@@ -36,7 +24,6 @@
       font-weight: 400;
       font-size: 1.75rem;
       line-height: 150%;
-      /* or 42px */
       color: #16161d;
     }
 
@@ -47,7 +34,6 @@
       line-height: 150%;
       display: block;
       margin-bottom: 1.5rem;
-      /* identical to box height, or 42px */
       color: var(--primary-color);
 
       &:hover {
@@ -59,7 +45,6 @@
   .photoArea {
     display: flex;
     justify-content: flex-start;
-    // align-items: flex-end;
     width: 45%;
 
     button.connect {
@@ -103,7 +88,6 @@ button.connect {
 
       h1 {
         font-size: 2rem;
-        line-height: 2rem;
       }
 
       p {
@@ -148,22 +132,15 @@ button.connect {
   .section {
     padding: 0 1.2rem;
 
-    // background-size: 10rem 10rem;
     .textArea {
       h1 {
         font-size: 2rem;
         line-height: 2rem;
       }
 
-      p {
-        // font-size: 1.25rem;
-        // line-height: 120%;
-      }
-
       a {
         font-size: 1.15rem;
         line-height: 120%;
-        // margin-bottom: 1.5rem;
       }
     }
   }

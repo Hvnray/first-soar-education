@@ -137,19 +137,21 @@
 
         .img {
           padding: 0 1rem;
-          // margin-left: 0;
         }
       }
+
       .texts {
         p {
           font-size: 1.25rem;
           line-height: 140%;
         }
+
         ul {
           li {
             padding: 0.8rem;
             font-size: 1.25rem;
             line-height: 140%;
+
             &:last-of-type {
               font-size: 1.1rem;
             }

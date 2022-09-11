@@ -11,9 +11,7 @@
       font-size: 2.25rem;
       line-height: 124%;
       text-align: left;
-
       text-transform: capitalize;
-
       color: var(--primary-color);
     }
 
@@ -36,10 +34,7 @@
       font-weight: 400;
       font-size: 1.625rem;
       line-height: 92%;
-      /* identical to box height, or 92% */
-
       text-transform: capitalize;
-
       color: var(--primary-color);
 
     }
@@ -64,7 +59,8 @@
 
 @media only screen and (max-width: 1400px) {
   .section {
-    padding-bottom:5rem ;
+    padding-bottom: 5rem;
+
     .body {
       padding: 0.2rem 1rem;
 
@@ -103,7 +99,6 @@
     padding: 0 1rem 2rem;
 
     .header {
-      // padding: 1rem 18rem;
       margin-left: 1rem;
 
       h1 {
@@ -111,8 +106,6 @@
         line-height: 2rem;
         text-align: left;
       }
-
-      // padding: 2rem 10rem 1rem;
     }
 
     .body {
@@ -120,7 +113,6 @@
 
       p {
         font-size: 1.25rem;
-        // padding: 0.5rem 1rem;
       }
 
       .textAndImgSection {
@@ -145,17 +137,13 @@
     padding: 0 0 1.2rem;
 
     .header {
-      // padding: 1rem 18rem;
       margin-left: 1rem;
 
       h1 {
         font-size: 1.4rem;
         line-height: 1.8rem;
       }
-
-      // padding: 2rem 10rem 1rem;
     }
 
-    .body {}
   }
 }

@@ -22,14 +22,10 @@
       &.highlight {
         color: var(--primary-color);
         font-weight: 400;
-        // font-size: 1.75rem;
-
       }
     }
 
     a {
-      // display: inline-block;
-      // margin: 0 auto;
       width: fit-content;
       text-align: center;
       background: var(--primary-color);
@@ -43,18 +39,6 @@
       line-height: 1.5rem;
     }
 
-  }
-}
-
-@media only screen and (max-width: 1500px) {
-  .section {
-    .body {}
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .section {
-    .body {}
   }
 }
 
@@ -81,7 +65,6 @@
 
     .body {
       .img {
-        // width: 94%;
         display: none;
       }
 

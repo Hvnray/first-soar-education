@@ -14,6 +14,7 @@
     line-height: 1.2rem;
     color: #3c3f48;
   }
+
   h4 {
     font-style: normal;
     font-weight: 500;
@@ -32,10 +33,12 @@
   background: var(--white-color);
   border-radius: 1rem;
   margin-top: 1rem;
+
   .summary {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+
     p {
       font-style: normal;
       font-weight: 500;
@@ -45,10 +48,12 @@
       width: 85%;
       max-width: 85%;
     }
+
     img {
       transition: all 1s ease-in;
     }
   }
+
   .body {
     transition: all 10s ease-in;
     font-style: normal;
@@ -59,6 +64,7 @@
     color: rgba(22, 22, 29, 0.72);
   }
 }
+
 @media only screen and (max-width: 800px) {
   .section {
     padding-bottom: 3rem;
@@ -69,11 +75,13 @@
       font-size: 2.2rem;
       line-height: 1.2rem;
     }
+
     h4 {
       font-size: 1.8rem;
       line-height: 1.3rem;
     }
   }
+
   .details {
     width: 100%;
     max-width: calc(100vw - 3rem);
@@ -95,37 +103,28 @@
 //font sizes for mobile
 @media only screen and (max-width: 500px) {
   .section {
-      h2 {
+    h2 {
       padding-top: 0;
-      // padding-top: 4rem;
       font-size: 2rem;
       line-height: 1.2rem;
     }
+
     h4 {
       font-size: 1.4rem;
       line-height: 1.5rem;
     }
   }
+
   .details {
     padding: 0.1rem 1rem;
-    // width: 100%;
-    // max-width: calc(100vw - 30rem);
-    // margin: 0 auto;
-    // background: var(--white-color);
-    // border-radius: 1rem;
-    // margin-top: 1rem;
+
     .summary {
-      // display: flex;
-      // justify-content: space-between;
-      // cursor: pointer;
       p {
-        // font-style: normal;
-        // font-weight: 500;
         font-size: 1rem;
         line-height: 1.1rem;
-        // color: #16161d;
       }
     }
+
     .body {
       font-size: 1rem;
       line-height: 1.3rem;

@@ -8,12 +8,14 @@
   background-position: 0% 0%, 100% 100%;
   background-repeat: no-repeat, no-repeat;
   padding: 2rem;
-  div{
+
+  div {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
   }
+
   h2 {
     text-align: center;
     font-style: normal;
@@ -24,6 +26,7 @@
     font-weight: 700;
     color: #3c3f48;
   }
+
   h3 {
     font-style: normal;
     font-weight: 600;
@@ -33,6 +36,7 @@
     text-transform: capitalize;
     color: #3c3f48;
   }
+
   p {
     font-weight: 400;
     font-size: 1.625rem;
@@ -40,9 +44,11 @@
     color: var(--primary-color);
     width: 60%;
     margin: 0 auto;
-    &:nth-of-type(2){
+
+    &:nth-of-type(2) {
       margin-top: 3rem;
     }
+
     &:last-of-type {
       text-align: center;
       width: 40%;
@@ -50,15 +56,18 @@
     }
   }
 }
+
 @media only screen and (max-width: 800px) {
   .section {
     max-width: 100%;
     width: 100%;
     display: block;
     padding: 3rem 0 2rem;
-    p{
+
+    p {
       width: 85%;
       text-align: center;
+
       &:last-of-type {
         width: 85%;
         margin-bottom: 6rem;
@@ -70,18 +79,21 @@
 //font sizes for mobile
 @media only screen and (max-width: 500px) {
   .section {
-    div{
+    div {
       margin-top: 3rem;
     }
+
     h2 {
       margin-top: 4rem;
       font-size: 2rem;
       line-height: 1.2rem;
     }
+
     h3 {
       font-size: 1.1rem;
       line-height: 1.8rem;
     }
+
     p {
       font-size: 1.25rem;
     }

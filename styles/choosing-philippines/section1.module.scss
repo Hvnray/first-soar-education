@@ -1,15 +1,12 @@
 .section {
   display: flex;
   width: 100%;
-  // justify-content: space-between;
   max-width: 100%;
   margin: 0 auto;
-  // margin-bottom: 2rem;
   margin-top: 4rem;
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  // Increase the padding on smaller screen 0 6rem
   padding: 0 6rem;
   color: var(--white-color);
   background-image: linear-gradient(
@@ -22,7 +19,6 @@
   background-size: cover, cover;
   .header {
     padding: 1rem 18rem;
-    // margin-bottom: 1rem;
     h1 {
       font-style: normal;
       font-weight: 700;
@@ -30,23 +26,18 @@
 
       line-height: 110%;
     }
-    // padding: 2rem 10rem 1rem;
   }
   .body {
     padding: 0 18rem;
-    // width: calc(100vw - 90%);
     h2 {
-      // width: 80%;
       text-align: left;
       font-style: normal;
       font-weight: 500;
       font-size: 1.75rem;
       line-height: 150%;
-      /* or 42px */
     }
   }
   a{
-    // display: block;
     margin: 1rem auto 2rem;
     text-align: center;
     padding: 0.5rem 1rem;
@@ -75,46 +66,29 @@
 //font sizes for mobile
 @media only screen and (max-width: 500px) {
   .section {
-    // display: flex;
-    // width: 100%;
-    // // justify-content: space-between;
-    // max-width: 100%;
-    // margin: 0 auto;
-    // // margin-bottom: 2rem;
     margin-top: 0rem;
-    // flex-direction: column;
-    // justify-content: center;
-    // text-align: left;
-    // Increase the padding on smaller screen 0 6rem
     padding: 2rem 1rem 0;
     .header {
       padding: 1rem 1rem;
-      // margin-bottom: 1rem;
       h1 {
         font-style: normal;
         font-weight: 700;
         font-size: 2rem;
-  
         line-height: 140%;
         line-height: 140%;
       }
-      // padding: 2rem 10rem 1rem;
     }
     .body {
       padding: 0 1rem;
-      // width: calc(100vw - 90%);
       h2 {
-        // width: 80%;
         text-align: left;
         font-style: normal;
         font-weight: 500;
         font-size: 1.25rem;
         line-height: 140%;
-        /* or 42px */
       }
     }
     a{
-      // display: block;
       margin: 1rem auto 2rem;
       text-align: center;
       font-size: 1rem;
