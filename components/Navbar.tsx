@@ -14,7 +14,7 @@ const Navbar = () => {
   const windowSize = useNavbarObserver();
   const aboutPage = useRef<HTMLElement | null>(null);
 
-  const [open, SetOpen] = useState(false);
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const [logo, SetLogo] = useState<Logos>("/logo.svg");
   const [navHasScroll, SetNavHasScroll] = useState(false);
   const [isMobileView, setisMobileView] = useState(false);
@@ -63,7 +63,7 @@ const Navbar = () => {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
-    SetOpen(!open);
+    setMobileMenuIsOpen(!mobileMenuIsOpen);
   };
 
   const windowOnScroll = () => {
@@ -94,20 +94,24 @@ const Navbar = () => {
     if (!isMobileView) {
       SetLogo("/logo.svg");
     } else if (isMobileView) {
-      if (navHasScroll ||router.pathname == "/contact-us") {
+      if (
+        navHasScroll ||
+        router.pathname == "/contact-us" ||
+        mobileMenuIsOpen
+      ) {
         SetLogo("/logo.svg");
       } else {
         SetLogo("/logo_white.svg");
       }
     }
-  }, [isMobileView, navHasScroll,router]);
+  }, [isMobileView, navHasScroll, router, mobileMenuIsOpen]);
 
   return (
     <div className={styles.container}>
       <header
         id="navHeader"
         className={cn(styles.header, {
-          [styles.menuOpened]: open || navHasScroll,
+          [styles.menuOpened]: mobileMenuIsOpen || navHasScroll,
         })}
       >
         <Link href="/" passHref>
@@ -125,8 +129,9 @@ const Navbar = () => {
         <button
           name="menubutton"
           className={cn({
-            [styles.menuOpened]: open,
-            [styles.navHasScroll]: navHasScroll ||router.pathname == "/contact-us",
+            [styles.menuOpened]: mobileMenuIsOpen,
+            [styles.navHasScroll]:
+              navHasScroll || router.pathname == "/contact-us",
           })}
           onClick={handleMenuClick}
         ></button>
@@ -153,8 +158,11 @@ const Navbar = () => {
             </a>
           </Link>
         </nav>
-        {open && (
-          <div className={styles.mobileMenu} onClick={() => SetOpen(false)}>
+        {mobileMenuIsOpen && (
+          <div
+            className={styles.mobileMenu}
+            onClick={() => setMobileMenuIsOpen(false)}
+          >
             <Link href="/">Home</Link>
             <Link href="/choosing-philippines">Why Choose Philippines</Link>
             <Link href="/medicine">Study Medicine In Philippines</Link>
