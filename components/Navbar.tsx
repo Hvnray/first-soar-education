@@ -6,8 +6,10 @@ import cn from "classnames";
 import { mobileMenuSocials } from "../utils";
 import { useNavbarObserver } from "../customHooks";
 import { useRouter } from "next/router";
+import defaultLogo from '../public/logo.svg'
+import whiteLogo from '../public/logo.svg'
 
-type Logos = "/logo.svg" | "/logo_white.svg";
+type Logos = typeof defaultLogo | typeof whiteLogo;
 
 const Navbar = () => {
   const router = useRouter();
@@ -15,7 +17,7 @@ const Navbar = () => {
   const aboutPage = useRef<HTMLElement | null>(null);
 
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  const [logo, SetLogo] = useState<Logos>("/logo.svg");
+  const [logo, SetLogo] = useState<Logos>(defaultLogo);
   const [navHasScroll, SetNavHasScroll] = useState(false);
   const [isMobileView, setisMobileView] = useState(false);
   const [currentPageAbout, setCurrentPageAbout] = useState(false);
@@ -92,16 +94,16 @@ const Navbar = () => {
 
   useEffect(() => {
     if (!isMobileView) {
-      SetLogo("/logo.svg");
+      SetLogo(defaultLogo);
     } else if (isMobileView) {
       if (
         navHasScroll ||
         router.pathname == "/contact-us" ||
         mobileMenuIsOpen
       ) {
-        SetLogo("/logo.svg");
+        SetLogo(defaultLogo);
       } else {
-        SetLogo("/logo_white.svg");
+        SetLogo(whiteLogo);
       }
     }
   }, [isMobileView, navHasScroll, router, mobileMenuIsOpen]);
@@ -120,8 +122,9 @@ const Navbar = () => {
               className={styles.logo}
               src={logo}
               alt="Vercel Logo"
-              width={185}
+              // width={185}
               height={60}
+              quality={100}
               priority
             />
           </a>
@@ -177,8 +180,9 @@ const Navbar = () => {
                         className={styles.logo}
                         src={b.image}
                         alt={b.alt}
-                        width={38}
-                        height={38}
+                        quality={100}
+                        // width={38}
+                        // height={38}
                       />
                     </a>
                   </li>

@@ -4,7 +4,7 @@ import styles from "../styles/Footer.module.scss";
 import { SocialMedia, footerNavLinks } from "../utils";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   return (
     <footer className={styles.footer}>
       <h2>First Soar Education </h2>
@@ -21,7 +21,7 @@ const Footer = () => {
         {SocialMedia.map((b, i) => (
           <li key={i}>
             <a href={b.url} target="_blank" rel="noreferrer">
-              <Image src={b.logo} alt={b.name} width={65} height={65}  priority/>
+              <Image src={b.logo} alt={b.name} quality={100} priority />
             </a>
           </li>
         ))}
