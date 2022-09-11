@@ -6,10 +6,10 @@ import cn from "classnames";
 import { mobileMenuSocials } from "../utils";
 import { useNavbarObserver } from "../customHooks";
 import { useRouter } from "next/router";
-import defaultLogo from '../public/logo.svg'
-import whiteLogo from '../public/logo.svg'
+import DefaultLogo from '../public/logo.svg'
+import WhiteLogo from '../public/logo_white.svg'
 
-type Logos = typeof defaultLogo | typeof whiteLogo;
+type Logos = typeof DefaultLogo | typeof WhiteLogo;
 
 const Navbar = () => {
   const router = useRouter();
@@ -17,7 +17,7 @@ const Navbar = () => {
   const aboutPage = useRef<HTMLElement | null>(null);
 
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  const [logo, SetLogo] = useState<Logos>(defaultLogo);
+  const [logo, SetLogo] = useState<Logos>(DefaultLogo);
   const [navHasScroll, SetNavHasScroll] = useState(false);
   const [isMobileView, setisMobileView] = useState(false);
   const [currentPageAbout, setCurrentPageAbout] = useState(false);
@@ -94,16 +94,16 @@ const Navbar = () => {
 
   useEffect(() => {
     if (!isMobileView) {
-      SetLogo(defaultLogo);
+      SetLogo(DefaultLogo);
     } else if (isMobileView) {
       if (
         navHasScroll ||
         router.pathname == "/contact-us" ||
         mobileMenuIsOpen
       ) {
-        SetLogo(defaultLogo);
+        SetLogo(DefaultLogo);
       } else {
-        SetLogo(whiteLogo);
+        SetLogo(WhiteLogo);
       }
     }
   }, [isMobileView, navHasScroll, router, mobileMenuIsOpen]);
