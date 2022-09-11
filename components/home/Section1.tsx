@@ -1,31 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/home/section1.module.scss";
+import Image1 from '../../public/image1.svg'
+import Image2 from '../../public/image2.svg'
+import Image3 from '../../public/image3.svg'
+import Image4 from '../../public/image4.svg'
+import Image5 from '../../public/image5.svg'
 
 const Section1 = () => {
   const imgs = [
     {
-      src: "/image1.svg",
+      src: Image1,
+      // src: "/image1.svg",
       alt: "girl graduating from a school in Philippines",
       size: [188, 236],
     },
     {
-      src: "/image2.svg",
+      src: Image2,
+      // src: "/image2.svg",
       alt: "Nigerian girl graduating from medical school in Philippines",
       size: [188, 290],
     },
     {
-      src: "/image3.svg",
+      src: Image3,
+      // src: "/image3.svg",
       alt: "Boy with dreadlock smiling",
       size: [295, 224],
     },
     {
-      src: "/image4.svg",
+      src: Image4,
+      // src: "/image4.svg",
       alt: "Group of students colaborating",
       size: [295, 196],
     },
     {
-      src: "/image5.svg",
+      src: Image5,
+      // src: "/image5.svg",
       alt: "Photo of a School auditorium",
       size: [295, 181],
     },
@@ -50,9 +60,10 @@ const Section1 = () => {
               <Image
                 src={b.src}
                 alt={b.alt}
-                width={b.size[0]}
-                height={b.size[1]}
+                // width={b.size[0]}
+                // height={b.size[1]}
                 priority
+                quality={100}
               />
             </div>
           ))}
@@ -63,8 +74,8 @@ const Section1 = () => {
               <Image
                 src={b.src}
                 alt={b.alt}
-                width={b.size[0]}
-                height={b.size[1]}
+                // width={b.size[0]}
+                // height={b.size[1]}
                 priority
               />
             </div>

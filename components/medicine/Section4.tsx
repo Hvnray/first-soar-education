@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/medicine/section4.module.scss";
+import Img from "../../public/medicine-footer-banner.svg";
 
 const Section4 = () => {
   return (
@@ -8,10 +9,11 @@ const Section4 = () => {
       <div className={styles.body}>
         <div className={styles.img}>
           <Image
-            src={"/medicine-footer-banner.svg"}
+            src={Img}
             alt={"photo group of medical students"}
-            width={1200}
-            height={320}
+            quality={100}
+            // width={1200}
+            // height={320}
             priority
           />
         </div>

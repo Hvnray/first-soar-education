@@ -1,22 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/choosing-philippines/section4.module.scss";
+import Img1 from "../../public/choosing-philippines/section4-img1.svg";
+import Img2 from "../../public/choosing-philippines/section4-img2.svg";
+import Img3 from "../../public/choosing-philippines/section4-img3.svg";
 
 const Section4 = () => {
   const block = [
     {
-      image: "/choosing-philippines/section4-img1.svg",
+      image: Img1,
       alt: "Philippines medical students",
 
       width: 322,
     },
     {
-      image: "/choosing-philippines/section4-img2.svg",
+      image: Img2,
       alt: "Doctor Naya",
       width: 265,
     },
     {
-      image: "/choosing-philippines/section4-img3.svg",
+      image: Img3,
       alt: "Philippines medical students",
       width: 361,
     },
@@ -30,11 +33,18 @@ const Section4 = () => {
         <section className={styles.images}>
           {block.map((b, i) => (
             <div className={styles.img} key={i}>
-              <Image src={b.image} alt={b.alt} width={b.width} height={247} priority/>
+              <Image
+                src={b.image}
+                alt={b.alt}
+                //  width={b.width}
+                //   height={247}
+                priority
+                quality={100}
+              />
             </div>
           ))}
         </section>
-        <Link href={'/medicine'}>Click Here</Link>
+        <Link href={"/medicine"}>Click Here</Link>
       </div>
     </section>
   );

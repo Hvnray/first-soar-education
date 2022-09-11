@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import styles from "../../styles/medicine/section1.module.scss";
 
 const Section1 = () => {

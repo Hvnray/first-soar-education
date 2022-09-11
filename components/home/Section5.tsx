@@ -1,16 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/home/section5.module.scss";
+import Image8 from '../../public/image8.svg'
 
 const Section5 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.imageSection}>
         <Image
-          src="/image8.svg"
-          alt="Manila Graphic"
-          width={358}
+          src={Image8}
+          alt="Medical student holding her note book"
+          // width={358}
           height={538}
+          quality={100}
           priority
         />
       </div>

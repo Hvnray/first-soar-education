@@ -12,8 +12,9 @@ const Section6 = () => {
             <Image
               src={b.image}
               alt={`Photo of ${b.name}`}
-              width={100}
-              height={100}
+              // width={100}
+              // height={100}
+              quality={100}
               priority
             />
             <h3>{b.name}</h3>

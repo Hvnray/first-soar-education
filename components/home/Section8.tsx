@@ -26,8 +26,9 @@ const Section8 = () => {
               <Image
                 src={b.image}
                 alt={b.name}
-                width={imgSize}
-                height={imgSize}
+                quality={100}
+                // width={imgSize}
+                // height={imgSize}
                 priority
               />
             </div>

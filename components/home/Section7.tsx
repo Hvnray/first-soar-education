@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/home/section7.module.scss";
+import ourMission from "../../public/ourMission.svg";
 
 const Section7 = () => {
   return (
@@ -18,7 +19,14 @@ const Section7 = () => {
         experiences, knowing that we are in their corner at all times.
       </p>
       <div>
-        <Image src="/ourMission.svg" alt="Our Mission Logo" width={60} height={60} priority />
+        <Image
+          src={ourMission}
+          alt="Our Mission Logo"
+          // width={60}
+          //  height={60}
+          quality={100}
+          priority
+        />
         <h3>Our Mission</h3>
       </div>
       <p>

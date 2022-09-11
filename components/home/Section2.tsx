@@ -1,16 +1,19 @@
 import Image from "next/image";
 import styles from "../../styles/home/section2.module.scss";
+import Image6 from '../../public/image6.svg'
 
 const Section2 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.imageSection}>
         <Image
-          src="/image6.svg"
+          src={Image6}
           alt="Manila Graphic"
-          width={505}
-          height={278}
+          // width={505}
+          // height={278}
+          layout="responsive"
           priority
+          quality={100}
           />
       </div>
       <div className={styles.textSection}>

@@ -1,18 +1,20 @@
 import Image from "next/image";
 import styles from "../../styles/choosing-philippines/section3.module.scss";
-
+import Img1 from "../../public/choosing-philippines/section3-img1.svg";
+import Img2 from "../../public/choosing-philippines/section3-img2.svg";
+import Img3 from "../../public/choosing-philippines/section3-img3.svg";
 const Section3 = () => {
   const block = [
     {
-      image: "/choosing-philippines/section3-img1.svg",
+      image: Img1,
       alt: "El nido 7 Commandos Beach Bacuit Bay",
     },
     {
-      image: "/choosing-philippines/section3-img2.svg",
+      image: Img2,
       alt: "chapel",
     },
     {
-      image: "/choosing-philippines/section3-img3.svg",
+      image: Img3,
       alt: "mountains",
     },
   ];
@@ -25,7 +27,14 @@ const Section3 = () => {
         <section className={styles.images}>
           {block.map((b, i) => (
             <div className={styles.img} key={i}>
-              <Image src={b.image} alt={b.alt} width={400} height={274} priority/>
+              <Image
+                src={b.image}
+                alt={b.alt}
+                // width={400}
+                // height={274}
+                priority
+                quality={100}
+              />
             </div>
           ))}
         </section>

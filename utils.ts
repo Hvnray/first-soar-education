@@ -8,6 +8,40 @@ const FaceBook = "Facebook Account";
 const Instagram = "Instagram Account";
 const Twitter = "Facebook Twitter";
 
+import Icon1 from './public/section4/icon1.svg'
+import Icon2 from './public/section4/icon2.svg'
+import Icon3 from './public/section4/icon3.svg'
+import Icon4 from './public/section4/icon4.svg'
+import Icon5 from './public/section4/icon5.svg'
+import Icon6 from './public/section4/icon6.svg'
+
+import StephenOmoOgun from './public/section6/stephenOmoOgun.svg'
+import DoctorAzike from './public/section6/doctorAzike.svg'
+import RichardManagor from './public/section6/richardManagor.svg'
+import JoqueenUloko from './public/section6/joqueenUloko.svg'
+import DoctorIjeoma from './public/section6/doctorIjeoma.svg'
+import EgnrValerie from './public/section6/egnrValerie.svg'
+import SharonArinze from './public/section6/sharonArinze.svg'
+
+
+import DoctorNaya from './public/section8/doctorNaya.svg'
+import DoctorChigozie from './public/section8/doctorChigozie.svg'
+import DanielAka from './public/section8/danielAka.svg'
+
+import footer_instagram from './public/footer/instagram.svg'
+import footer_twitter from './public/footer/twitter.svg'
+import footer_facebook from './public/footer/facebook.svg'
+
+
+import contact_us_instagram from './public/contact-us/instagram.svg'
+import contact_us_twitter from './public/contact-us/twitter.svg'
+import contact_us_facebook from './public/contact-us/facebook.svg'
+
+
+import navbar_instagram from './public/navbar/instagram.svg'
+import navbar_twitter from './public/navbar/twitter.svg'
+import navbar_facebook from './public/navbar/facebook.svg'
+
 interface PageExtender{
   title: string
 }
@@ -21,43 +55,43 @@ export type CustomPageProps = NextPage & PageExtender;
 
 export const info = [
   {
-    image: "/section4/icon1.svg",
+    image: Icon1,
     imageAlt: "Vercel Logo",
     title: "Education Counselling",
     text: "One on One educational consultation with our team.",
   },
   {
-    image: "/section4/icon2.svg",
+    image: Icon2,
     imageAlt: "Vercel Logo",
     title: "Accommodation Assistance",
     text: "Getting an apartment is made easier upon arrival in the Philippines.",
   },
   {
-    image: "/section4/icon3.svg",
+    image: Icon3,
     imageAlt: "Vercel Logo",
     title: "Visa Assistance",
     text: "We assist in getting students the necessary documents needed for the student visa processing.",
   },
   {
-    image: "/section4/icon4.svg",
+    image: Icon4,
     imageAlt: "Vercel Logo",
     title: "Airport Assistance",
     text: "Pick up and drop off upon arrival in the country.",
   },
   {
-    image: "/section4/icon5.svg",
+    image: Icon5,
     imageAlt: "Vercel Logo",
     title: "70+ Enrolled",
     text: "We have successfully enrolled over 70 students in accredited institutions in the Philippines.",
   },
   {
-    image: "/section4/icon6.svg",
+    image: Icon6,
     imageAlt: "Vercel Logo",
     title: "Funds Transfer",
     text: "Receiving funds from Nigeria is made easy to our students.",
   },
   {
-    image: "/section4/icon1.svg",
+    image: Icon1,
     imageAlt: "Vercel Logo",
     title: "50+ Graduates",
     text: "Over 50+ successful graduates doing exceptionally well in their various field globally.",
@@ -66,41 +100,41 @@ export const info = [
 
 export const studentsFeedBack = [
   {
-    image: "/section6/stephenOmoOgun.svg",
+    image: StephenOmoOgun,
     name: "Stephen Omo-Ogun",
     message:
       "I am a final year medical student, currently doing my internship program in the Philippines. We are exposed with the opportunity to work with medical professionals and hands-on experience with clinical cases.",
   },
   {
-    image: "/section6/doctorAzike.svg",
+    image: DoctorAzike,
     name: "Doctor Azike",
     message:
       "Furthering my studies in the Philippines was the best decision I made for my career. I am currently practicing as a medical doctor in Australia.",
   },
   {
-    image: "/section6/richardManagor.svg",
+    image: RichardManagor,
     name: "Richard Managor",
     message:
       "I graduated with a Bachelor of Art degree in literature in the Philippines. Earning this degree has paved way for me in my career as a professional writer and has opened employment opportunities for me globally.",
   },
   {
-    image: "/section6/joqueenUloko.svg",
+    image: JoqueenUloko,
     name: "Joqueen Uloko",
     message:
       "I am a second year pharmacy student at a higher institution in the Philippines. Philippines is one of the best place to study. Good tropical weather, affordable tuition fees, friendly and healthy learning environment with lecturers who are professionals willing and ready to invest in the life of students. I am happy I chose Philippines.",
   },
   {
-    image:'/section6/doctorIjeoma.svg',
+    image:DoctorIjeoma,
     name:'Doctor Ijeoma',
     message:'I am a 1st year medical resident in family medicine in Minnesota USA. I graduated from medical school in the Philippines. It is the best and most affordable place to earn a medical degree with a good highly structured health education.',
   },
   {
-    image:'/section6/egnrValerie.svg',
+    image:EgnrValerie,
     name:'Egnr. Valerie',
     message:'Studying engineering in the Philippines was made easy for me because most theories were practicality with quality and functional equipments. I’m a graduate currently running a franchise of General Safety and Engineering Firm and processing my Masters in the UK.',
   },
   {
-    image:'/section6/sharonArinze.svg',
+    image:SharonArinze,
     name:'Sharon Arinze',
     message:'Philippines is a country I explored so well. I received quality training and with my knowledge on Psychology which I studied there, I’ve been able to work with many patients with mental and developmental disabilities, it feels good serving the society. ',
   },
@@ -108,15 +142,15 @@ export const studentsFeedBack = [
 
 export const meetTheTeam = [
   {
-    image: "/section8/doctorNaya.svg",
+    image: DoctorNaya,
     name: "Doctor Naya",
   },
   {
-    image: "/section8/doctorChigozie.svg",
+    image: DoctorChigozie,
     name: "Doctor Chigozie",
   },
   {
-    image: "/section8/danielAka.svg",
+    image: DanielAka,
     name: "Daniel Aka",
   },
 ];
@@ -155,34 +189,34 @@ export const FAQ = [
 export const SocialMedia = [
   {
     url: "https://www.instagram.com/soareducationagency/",
-    logo: "/footer/instagram.svg",
+    logo: footer_instagram,
     name: `${FirstSoarEducation} ${Instagram}`,
   },
   {
     url: "https://www.facebook.com/firstsoareducation/",
-    logo: "/footer/facebook.svg",
+    logo: footer_facebook,
     name: `${FirstSoarEducation} ${FaceBook}`,
   },
   {
     url: "https://twitter.com/soareducation_",
-    logo: "/footer/twitter.svg",
+    logo: footer_twitter,
     name: `${FirstSoarEducation} ${Twitter}`,
   },
 ];
 export const contactUsSocialMedia = [
   {
     url: "https://www.instagram.com/soareducationagency/",
-    logo: "/contact-us/instagram.svg",
+    logo: contact_us_instagram,
     name: `${FirstSoarEducation} ${Instagram}`,
   },
   {
     url: "https://www.facebook.com/firstsoareducation/",
-    logo: "/contact-us/facebook.svg",
+    logo: contact_us_facebook,
     name: `${FirstSoarEducation} ${FaceBook}`,
   },
   {
     url: "https://twitter.com/soareducation_",
-    logo: "/contact-us/twitter.svg",
+    logo: contact_us_twitter,
     name: `${FirstSoarEducation} ${Twitter}`,
   },
 ];
@@ -212,17 +246,17 @@ export const footerNavLinks = [
 export const mobileMenuSocials = [
   {
     link: "https://www.instagram.com/soareducationagency/",
-    image: "/navbar/instagram.svg",
+    image: navbar_instagram,
     alt: `${FirstSoarEducation} ${Instagram}`,
   },
   {
     link: "https://www.facebook.com/firstsoareducation/",
-    image: "/navbar/facebook.svg",
+    image: navbar_facebook,
     alt: `${FirstSoarEducation} ${FaceBook}`,
   },
   {
     link: "https://twitter.com/soareducation_",
-    image: "/navbar/twitter.svg",
+    image: navbar_twitter,
     alt: `${FirstSoarEducation} ${Twitter}`,
   },
 ];

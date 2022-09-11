@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/medicine/section2.module.scss";
+import Img from "../../public/medicine-docs.svg";
 
 const Section2 = () => {
   return (
@@ -32,10 +33,11 @@ const Section2 = () => {
             <Link href={''}>start your Application process &#8594;</Link>
           </p>
           <Image
-            src={"/medicine-docs.svg"}
-            alt={""}
-            width={610}
-            height={402}
+            src={Img}
+            alt={"Medical Doctors' group photo"}
+            // width={610}
+            // height={402}
+            quality={100}
             priority
           />
         </div>
