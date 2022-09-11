@@ -32,6 +32,9 @@
   .logo{
     cursor: pointer;
   }
+  .logowrapper{
+    height: 60px;
+  }
   button,
   .mobileMenu {
     display: none;
@@ -44,14 +47,14 @@
       margin-right: 2.5rem;
       padding-bottom: 0.425rem;
       border-bottom: 0.125rem solid transparent;
-      &:hover {
-        color: var(--primary-color);
-        border-bottom: 0.125rem solid var(--primary-color);
-      }
-      &.isCurrent{
+      &.iscurrent{
         color: var(--primary-color);
         border-bottom: 0.125rem solid var(--primary-color);
   
+      }
+      &:hover {
+        color: var(--primary-color);
+        border-bottom: 0.125rem solid var(--primary-color);
       }
     }
   }
@@ -112,7 +115,7 @@
         line-height: 140%;
         /* or 36px */
 
-        color: #ffffff;
+        color: var(--white-color);
       }
       .mobileMenuSocials ul {
         display: flex;

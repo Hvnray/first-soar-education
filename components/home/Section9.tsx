@@ -12,7 +12,10 @@ type IconState =
   | ["/minusIcon.svg", "Close Icon"];
 
 const Details = ({ title, body }: DetailsParams) => {
-  const [iconUrl, setIconUrl] = useState<IconState>(["/plusIcon.svg", "Open Icon"]);
+  const [iconUrl, setIconUrl] = useState<IconState>([
+    "/plusIcon.svg",
+    "Open Icon",
+  ]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const onChange = () => {
     setIsOpen((opened) => !opened);
@@ -30,7 +33,13 @@ const Details = ({ title, body }: DetailsParams) => {
     <div className={styles.details}>
       <div className={styles.summary} onClick={onChange}>
         <p>{title}</p>
-        <Image src={iconUrl[0]} alt={iconUrl[1]} width={60} height={60} priority />
+        <Image
+          src={iconUrl[0]}
+          alt={iconUrl[1]}
+          width={60}
+          height={60}
+          priority
+        />
       </div>
       {isOpen && <p className={styles.body}>{body}</p>}
     </div>

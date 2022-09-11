@@ -1,8 +1,16 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useNavbarObserver } from "../../customHooks";
 import styles from "../../styles/home/section8.module.scss";
 import { meetTheTeam } from "../../utils";
 
 const Section8 = () => {
+  const windowSize = useNavbarObserver();
+  const [imgSize, setImgSize] = useState(180);
+  useEffect(() => {
+    setImgSize(windowSize <= 800 ? 90 : 180);
+  }, [windowSize]);
+
   return (
     <section className={styles.section}>
       <h2>Meet The Team</h2>
@@ -15,7 +23,13 @@ const Section8 = () => {
         {meetTheTeam.map((b, i) => (
           <div className={styles.info} key={i}>
             <div className={styles.img}>
-              <Image src={b.image} alt={b.name} width={180} height={180} priority />
+              <Image
+                src={b.image}
+                alt={b.name}
+                width={imgSize}
+                height={imgSize}
+                priority
+              />
             </div>
             <p className={styles.title}>{b.name}</p>
           </div>

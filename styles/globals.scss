@@ -14,7 +14,7 @@ html{
 }
 :root {
   --primary-color: #1140e7;
-  --secondary-color: #edf0fb;
+  --secondary-color: #EDF0FB;
   --accent-color: #000000;
   --shades-color: #9db2fa;
   --texts-color: #2e2c2c;
@@ -26,7 +26,8 @@ html{
   --yellow-color: #edf9a7;
   --green-color: #10a353;
   --orange-color: #fe8127;
-  --header-background: #ffffff;
+  --white-color: #FFFFFF;
+  --header-background: var(--white-color);
 }
 
 a {

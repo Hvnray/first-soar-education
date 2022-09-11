@@ -1,6 +1,6 @@
 .section {
   // display: flex;
-  background-color: #EDF0FB;
+  background-color: var(--secondary-color);
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -17,7 +17,7 @@
       font-size: 3.25rem;
       line-height: 145%;
       text-transform: capitalize;
-      color: #1140E7;
+      color: var(--primary-color);
     }
 
     p {
@@ -35,7 +35,7 @@
     min-width: 70%;
     margin: 0 auto;
     padding: 1.25rem;
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
     border-radius: 1.125rem;
     display: flex;
     // justify-content: space-between;
@@ -43,7 +43,7 @@
     .contactArea {
       background-color: #000000;
       border-radius: 0.875rem;
-      color: white;
+      color: var(--white-color);
       width: 33%;
       padding: 2rem;
 
@@ -121,7 +121,7 @@
         }
 
         &:focus-within label {
-          color: #1140E7;
+          color: var(--primary-color);
         }
 
         &.textarea {
@@ -133,7 +133,7 @@
         select,
         textarea {
           font-family: "Montserrat", sans-serif;
-          margin-top: 0.5rem;
+          // margin-top: 0.5rem;
           border: none;
           border-bottom: 0.125rem solid rgba(0, 0, 0, 0.29);
           width: 100%;
@@ -144,7 +144,23 @@
 
           &:focus-visible {
             outline: none;
-            border-bottom: 0.125rem solid #1140E7;
+            border-bottom: 0.125rem solid var(--primary-color);
+          }
+        }
+
+        select {
+          padding-top: 0.4rem;
+
+          &.firstItem {
+            color: gray;
+
+            option {
+              color: #000000;
+            }
+          }
+
+          option:first-of-type {
+            color: gray
           }
         }
       }
@@ -170,17 +186,30 @@
 
         button {
           // width: 58%;
-          background: #1140E7;
+          background-color: var(--primary-color);
           border-radius: 0.5rem;
           padding: 0.8rem 5rem;
           border: none;
           height: max-content;
-          color: white;
+          color: var(--white-color);
           font-style: normal;
           font-weight: 400;
           font-size: 1.25rem;
           line-height: 1.5rem;
+          margin-left: 3rem;
           cursor: pointer;
+
+          &:disabled {
+            background-color: #696969;
+            cursor: not-allowed;
+
+          }
+
+          &.sent {
+            background-color: var(--green-color);
+            cursor: not-allowed;
+
+          }
         }
       }
     }
@@ -284,18 +313,21 @@
           line-height: 120%;
           min-width: 100%;
           margin-bottom: 1.5rem;
-          &.textarea{
+
+          &.textarea {
             min-width: 100%;
 
           }
+
           input,
           select,
           textarea {
-            
-            &::placeholder{
-            
-          font-size: 0.8rem;
-          }}
+
+            &::placeholder {
+
+              font-size: 0.8rem;
+            }
+          }
         }
 
         .end {
@@ -308,6 +340,11 @@
           button {
             margin-bottom: 1rem;
             width: 100%;
+          }
+
+          button {
+
+            margin-left: 0;
           }
         }
       }

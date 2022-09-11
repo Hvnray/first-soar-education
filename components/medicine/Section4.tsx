@@ -22,7 +22,7 @@ const Section4 = () => {
         <p>
         Begin your journey by filling our contact form. We will help you take that bold step.
         </p>
-        <Link href={"/"}>Fill Form</Link>
+        <Link href={"/contact-us"}>Fill Form</Link>
       </div>
     </section>
   );

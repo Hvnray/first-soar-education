@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 100%;
   padding: 1rem 6rem;
-  background-color: #EDF0FB;
+  background-color: var(--secondary-color);
 
   .header {
 
@@ -16,7 +16,7 @@
       text-transform: capitalize;
 
       margin-bottom: -0.5rem;
-      color: #1140e7;
+      color: var(--primary-color);
     }
 
   }
@@ -39,7 +39,7 @@
       li {
         p {
           span {
-            color: #1140e7;
+            color: var(--primary-color);
           }
         }
       }
@@ -55,7 +55,7 @@
 
       text-transform: capitalize;
 
-      color: #1140E7;
+      color: var(--primary-color);
 
     }
 

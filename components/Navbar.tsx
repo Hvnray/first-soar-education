@@ -10,48 +10,54 @@ import { useRouter } from "next/router";
 type Logos = "/logo.svg" | "/logo_white.svg";
 
 const Navbar = () => {
+  const router = useRouter();
+  const windowSize = useNavbarObserver();
+  const aboutPage = useRef<HTMLElement | null>(null);
+
   const [open, SetOpen] = useState(false);
   const [logo, SetLogo] = useState<Logos>("/logo.svg");
   const [navHasScroll, SetNavHasScroll] = useState(false);
-  const [scrollOnAbout, setscrollOnAbout] = useState(false);
+  const [isMobileView, setisMobileView] = useState(false);
+  const [currentPageAbout, setCurrentPageAbout] = useState(false);
   const [curentPageMedicine, setCurentPageMedicine] = useState(false);
   const [curentPageHome, setCurentPageHome] = useState(false);
   const [curentPageContactUs, setCurentPageContactUs] = useState(false);
-  let aboutPage = useRef<HTMLElement | null>(null);
-  const router = useRouter();
 
-  // useEffect(() => {
-  //   const reloadRoute = () => {
-  //     if (router.pathname == "/medicine") {
-  //       setCurentPageMedicine(true);
-  //       console.log("medicine yes");
-  //     } else {
-  //       console.log("medicine no");
-  //       setCurentPageMedicine(false);
-  //     }
-  //     if (router.pathname === "/" && !scrollOnAbout) {
-  //       console.log("home -no about yes");
-  //       setCurentPageHome(true);
-  //       setscrollOnAbout(false);
-  //     } else if (router.pathname === "/" && scrollOnAbout) {
-  //       console.log("home -no about no");
-  //       setscrollOnAbout(true);
-  //       setCurentPageHome(false);
-  //     }
-  //     if (router.pathname === "/contact-us") {
-  //       console.log("contact-us yes");
-  //       setCurentPageContactUs(true);
-  //     } else {
-  //       console.log("contact-us no");
+  useEffect(() => {
+    // console.log('router.pathname',router.pathname)
+    if (router.pathname == "/" && !currentPageAbout) {
+      setCurentPageHome(true);
+      setCurentPageMedicine(false);
+      setCurentPageContactUs(false);
+      setCurrentPageAbout(false);
+      return;
+    }
+    if (router.pathname == "/" && currentPageAbout) {
+      setCurentPageHome(false);
+      setCurentPageMedicine(false);
+      setCurentPageContactUs(false);
+      setCurrentPageAbout(true);
+      return;
+    }
+    if (router.pathname == "/medicine") {
+      setCurentPageMedicine(true);
+      setCurentPageHome(false);
+      setCurentPageContactUs(false);
+      setCurrentPageAbout(false);
+      return;
+    }
+    if (router.pathname == "/contact-us") {
+      setCurentPageMedicine(false);
+      setCurentPageHome(false);
+      setCurentPageContactUs(true);
+      setCurrentPageAbout(false);
+      return;
+    }
+  }, [router, router.pathname, currentPageAbout]);
 
-  //       setCurentPageContactUs(false);
-  //     }
-  //     console.log("router", router);
-  //   };
-  //   reloadRoute();
-  // }, [router, router.pathname, scrollOnAbout]);
-
-  const windowSize = useNavbarObserver();
+  useEffect(() => {
+    setisMobileView(windowSize <= 800);
+  }, [windowSize]);
 
   const handleMenuClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -61,16 +67,14 @@ const Navbar = () => {
   };
 
   const windowOnScroll = () => {
-    SetNavHasScroll(window.scrollY > 30 ? true : false);
+    SetNavHasScroll(window.scrollY > 30);
     if (aboutPage.current) {
-      const topPosition = aboutPage.current.offsetTop - 3; //subtract 5 to handle edge case
+      const topPosition = aboutPage.current.offsetTop - 80; //subtract 80 to handle margin and padding
       const bottomPosition =
-        aboutPage.current.offsetTop + aboutPage.current.offsetHeight - 5; //subtract 5 to handle edge case
-      if (window.scrollY > topPosition && window.scrollY < bottomPosition) {
-        setscrollOnAbout(true);
-      } else {
-        setscrollOnAbout(false);
-      }
+        aboutPage.current.offsetTop + aboutPage.current.offsetHeight - 30; //subtract 5 to handle margin and padding
+      setCurrentPageAbout(
+        window.scrollY > topPosition && window.scrollY < bottomPosition
+      );
     }
   };
 
@@ -87,21 +91,16 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (windowSize >= 800) {
+    if (!isMobileView) {
       SetLogo("/logo.svg");
-    } else {
-      if (windowSize <= 800) {
+    } else if (isMobileView) {
+      if (navHasScroll ||router.pathname == "/contact-us") {
+        SetLogo("/logo.svg");
+      } else {
         SetLogo("/logo_white.svg");
       }
-
-      if (windowSize < 800 && navHasScroll) {
-        SetLogo("/logo.svg");
-      }
-      if (open) {
-        SetLogo("/logo.svg");
-      }
     }
-  }, [open, navHasScroll, windowSize]);
+  }, [isMobileView, navHasScroll,router]);
 
   return (
     <div className={styles.container}>
@@ -112,7 +111,7 @@ const Navbar = () => {
         })}
       >
         <Link href="/" passHref>
-          <>
+          <a className={styles.logowrapper}>
             <Image
               className={styles.logo}
               src={logo}
@@ -121,43 +120,37 @@ const Navbar = () => {
               height={60}
               priority
             />
-          </>
+          </a>
         </Link>
         <button
           name="menubutton"
           className={cn({
             [styles.menuOpened]: open,
-            [styles.navHasScroll]: navHasScroll,
+            [styles.navHasScroll]: navHasScroll ||router.pathname == "/contact-us",
           })}
           onClick={handleMenuClick}
         ></button>
 
         <nav>
-          <Link
-            href="/"
-            className={cn({
-              [styles.isCurrent]: curentPageHome,
-            })}
-          >
-            Home
+          <Link href="/" passHref>
+            <a className={curentPageHome ? styles.iscurrent : undefined}>
+              Home
+            </a>
           </Link>
-          <Link
-            href="/medicine"
-            className={curentPageMedicine ? styles.isCurrent : undefined}
-          >
-            Medicine
+          <Link href="/medicine" passHref>
+            <a className={curentPageMedicine ? styles.iscurrent : undefined}>
+              Medicine
+            </a>
           </Link>
-          <Link
-            href="/#about-us"
-            className={scrollOnAbout ? styles.isCurrent : undefined}
-          >
-            About Us
+          <Link href="/#about-us" passHref>
+            <a className={currentPageAbout ? styles.iscurrent : undefined}>
+              About Us
+            </a>
           </Link>
-          <Link
-            href="/contact-us"
-            className={curentPageContactUs ? styles.isCurrent : undefined}
-          >
-            Contact Us
+          <Link href="/contact-us" passHref>
+            <a className={curentPageContactUs ? styles.iscurrent : undefined}>
+              Contact Us
+            </a>
           </Link>
         </nav>
         {open && (
@@ -171,7 +164,7 @@ const Navbar = () => {
               <ul>
                 {mobileMenuSocials.map((b, i) => (
                   <li key={i}>
-                    <a href={b.link}>
+                    <a href={b.link} target="_blank" rel="noreferrer">
                       <Image
                         className={styles.logo}
                         src={b.image}

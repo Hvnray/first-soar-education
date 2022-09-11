@@ -20,7 +20,7 @@
       color: #3E3B3B;
 
       &.highlight {
-        color: #1140e7;
+        color: var(--primary-color);
         font-weight: 400;
         // font-size: 1.75rem;
 
@@ -32,10 +32,10 @@
       // margin: 0 auto;
       width: fit-content;
       text-align: center;
-      background: #1140e7;
+      background: var(--primary-color);
       border-radius: .5rem;
       padding: 0.8rem;
-      color: white;
+      color: var(--white-color);
       margin: 1rem auto 2rem;
       font-style: normal;
       font-weight: 400;
@@ -96,7 +96,7 @@
           max-width: 21.3125rem;
           background-repeat: no-repeat;
           background-size: cover;
-          color: white;
+          color: var(--white-color);
           display: flex;
           align-items: flex-end;
 

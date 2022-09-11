@@ -30,11 +30,11 @@ const Section4 = () => {
         <section className={styles.images}>
           {block.map((b, i) => (
             <div className={styles.img} key={i}>
-              <Image src={b.image} alt={b.alt} width={b.width} height={247} />
+              <Image src={b.image} alt={b.alt} width={b.width} height={247} priority/>
             </div>
           ))}
         </section>
-        <Link href={'/'}>Click Here</Link>
+        <Link href={'/medicine'}>Click Here</Link>
       </div>
     </section>
   );

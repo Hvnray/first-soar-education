@@ -12,7 +12,7 @@
       line-height: 2.75rem;
       text-align: center;
       text-transform: capitalize;
-      color: #1140e7;
+      color: var(--primary-color);
     }
   }
 
@@ -36,10 +36,10 @@
       // margin: 0 auto;
       width: fit-content;
       text-align: center;
-      background: #1140E7;
+      background: var(--primary-color);
       border-radius: .5rem;
       padding: 1rem;
-      color: white;
+      color: var(--white-color);
       margin-bottom: 2rem;
       font-style: normal;
       font-weight: 400;

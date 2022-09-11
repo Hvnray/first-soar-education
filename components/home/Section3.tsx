@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../../styles/home/section3.module.scss";
 
 const Section3 = () => {
@@ -11,7 +12,7 @@ const Section3 = () => {
           committed to provide easy and stress-free process for your study
           abroad with no consultation fee.
         </p>
-        <button className={styles.connect}>Connect With Us</button>
+        <Link href={'/contact-us'}><button className={styles.connect}>Connect With Us</button></Link>
       </div>
       <div className={styles.photoArea}>
         <Image className={styles.image} src="/image7.svg" alt="Vercel Logo" width={503} height={567} priority />

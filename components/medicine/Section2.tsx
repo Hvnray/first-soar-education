@@ -39,7 +39,7 @@ const Section2 = () => {
             priority
           />
         </div>
-        <Link href={''}>start your Application process &#8594;</Link>
+        <Link href={'/contact-us'}>start your Application process &#8594;</Link>
       </div>
     </section>
   );

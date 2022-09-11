@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/choosing-philippines/section1.module.scss";
 
@@ -19,7 +18,7 @@ const Section1 = () => {
           the Philippines?
         </h2>
       </div>
-      <Link href={"#"}>Contact Us</Link>
+      <Link href={"/contact-us"}>Contact Us</Link>
     </section>
   );
 };

@@ -78,7 +78,7 @@
         h1 {
           width: 90%;
           margin: 0 auto;
-          color: white;
+          color: var(--white-color);
           font-size: 3.2rem;
           text-align: center;
           vertical-align: bottom;
@@ -112,7 +112,7 @@
       a{
         font-size: 1.2rem;
         line-height: 150%;
-        padding: 0.5rem;
+        // padding: 0.5rem;
 
       }
       .hOne {

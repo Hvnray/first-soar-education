@@ -31,7 +31,7 @@
       /* or 42px */
       color: #16161d;
     }
-    a {
+    a:not(.button) {
       font-style: normal;
       font-weight: 400;
       font-size: 1.75rem;
@@ -39,17 +39,17 @@
       display: block;
       margin-bottom: 1.5rem;
       /* identical to box height, or 42px */
-      color: #1140e7;
+      color: var(--primary-color);
       &:hover {
         text-decoration: underline;
       }
     }
-    button {
+    .button {
       padding: 0.9375rem;
-      background: #1140e7;
+      background: var(--primary-color);
       border-radius: 0.5rem;
       border: 1px solid transparent;
-      color: #ffffff;
+      color: var(--white-color);
       font-style: normal;
       font-weight: 400;
       font-size: 1.625rem;
@@ -126,7 +126,7 @@
         color: #fff;
         line-height: 130%;
       }
-      a{
+      a:not(.button){
         display: none;
       }
     }
@@ -157,8 +157,8 @@
   .section {
     background-position: 50% -1rem;
     .textArea {
-      button {
-        padding: 1rem;
+      .button {
+        padding: 0.8rem;
         font-size: 1.2rem;
         line-height: 1.2rem;
       }

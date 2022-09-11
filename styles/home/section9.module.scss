@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  background-color: #edf0fb;
+  background-color: var(--secondary-color);
   padding-bottom: 6rem;
 
   h2 {
@@ -29,7 +29,7 @@
   width: 100%;
   max-width: calc(100vw - 30rem);
   margin: 0 auto;
-  background: #ffffff;
+  background: var(--white-color);
   border-radius: 1rem;
   margin-top: 1rem;
   .summary {
@@ -111,7 +111,7 @@
     // width: 100%;
     // max-width: calc(100vw - 30rem);
     // margin: 0 auto;
-    // background: #ffffff;
+    // background: var(--white-color);
     // border-radius: 1rem;
     // margin-top: 1rem;
     .summary {

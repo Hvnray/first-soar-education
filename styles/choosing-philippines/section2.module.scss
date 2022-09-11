@@ -12,7 +12,7 @@
   // Increase the padding on smaller screen 0 6rem
   padding: 0 6rem;
 
-  // color: white;
+  // color: var(--white-color);
   // background-image: linear-gradient(
   //     270deg,
   //     rgba(0, 0, 0, 0.38) 45.31%,
@@ -35,7 +35,7 @@
 
       text-transform: capitalize;
 
-      color: #1140e7;
+      color: var(--primary-color);
     }
 
     // padding: 2rem 10rem 1rem;
@@ -54,7 +54,7 @@
       li {
         display: block;
         width: 21%;
-        background: #ffffff;
+        background: var(--white-color);
         border: 0.125rem solid rgba(62, 59, 59, 0.22);
         border-radius: 1rem;
         margin: 1rem;

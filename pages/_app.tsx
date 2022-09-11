@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
         <title>{`First Soar Education - ${Component.title}`}</title>
         <meta
           name="description"
-          content={`First Soar Education  - ${Component.title}`}
+          content={`First Soar Education  - ${Component.title} - Study abroad, study in the philippines`}
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

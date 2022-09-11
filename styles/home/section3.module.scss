@@ -48,7 +48,7 @@
       display: block;
       margin-bottom: 1.5rem;
       /* identical to box height, or 42px */
-      color: #1140e7;
+      color: var(--primary-color);
 
       &:hover {
         text-decoration: underline;
@@ -71,11 +71,11 @@
 }
 
 button.connect {
-  padding: 0.9375rem;
-  background: #1140e7;
+  padding: 0.8rem;
+  background: var(--primary-color);
   border-radius: 0.5rem;
   border: 1px solid transparent;
-  color: #ffffff;
+  color: var(--white-color);
   font-style: normal;
   font-weight: 400;
   font-size: 1.625rem;
@@ -118,10 +118,6 @@ button.connect {
       }
     }
 
-    .textArea button.connect {
-      // display: none;
-    }
-
     .photoArea {
       justify-content: center;
 
@@ -144,7 +140,7 @@ button.connect {
 @media only screen and (max-width: 500px) {
 
   button.connect {
-    padding: 0.5rem 0.2rem;
+    // padding: 0.5rem 0.2rem;
     font-size: 1rem;
     line-height: 1.1rem;
   }

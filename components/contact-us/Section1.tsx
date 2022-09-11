@@ -1,10 +1,17 @@
 import Image from "next/image";
-import { MouseEventHandler, useState } from "react";
+import { useState } from "react";
 import styles from "../../styles/contact-us/section1.module.scss";
-import { contactUsSocialMedia } from "../../utils";
+import {
+  contactUsSocialMedia,
+  degreesInPhillipines,
+  educationalLevelList,
+} from "../../utils";
 import cn from "classnames";
 
 const Section1 = () => {
+  // const phonePattern ="+[0-9]{3} [0-9]{3} [0-9]{3} [0-9]{4}"
+  const phonePattern = "[+][0-9]{13}";
+  const coursePlaceholder = "Enter your course of choice";
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [educationalLevel, seteducationalLevel] = useState("");
@@ -12,8 +19,8 @@ const Section1 = () => {
   const [phone, setphone] = useState("");
   const [email, setemail] = useState("");
   const [message, setmessage] = useState("");
+  const [submitText, setsubmitText] = useState("Send");
   const [submitting, setsubmitting] = useState(false);
-  const [submitted, setsubmitted] = useState(false);
   const formBlock = [
     {
       id: "firstName",
@@ -41,21 +48,23 @@ const Section1 = () => {
       value: educationalLevel,
       onSelectChange: (e: React.ChangeEvent<HTMLSelectElement>) =>
         seteducationalLevel(e.target.value),
+      list: ["", ...educationalLevelList],
     },
     {
       id: "course",
       label: "Course",
-      type: "text",
-      placeholder: "Enter your course of choice",
+      type: "select",
+      placeholder: "",
       value: course,
-      onTextChange: (e: React.ChangeEvent<HTMLInputElement>) =>
+      onSelectChange: (e: React.ChangeEvent<HTMLSelectElement>) =>
         setcourse(e.target.value),
+      list: [coursePlaceholder, ...degreesInPhillipines.sort(), "Others"],
     },
     {
       id: "phoneNumber",
       label: "Phone Number",
       type: "tel",
-      placeholder: "+234 810 000 0000",
+      placeholder: "+2348000000000",
       value: phone,
       onTextChange: (e: React.ChangeEvent<HTMLInputElement>) =>
         setphone(e.target.value),
@@ -80,6 +89,7 @@ const Section1 = () => {
     },
   ];
   function sendButtonClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    if (submitting || submitText !== "Send") return;
     if (
       firstName != "" &&
       lastName != "" &&
@@ -91,11 +101,12 @@ const Section1 = () => {
     ) {
       e.preventDefault();
       setsubmitting(true);
+      setsubmitText("Sending...");
       const data = {
-        firstName,
-        lastName,
-        educationalLevel,
-        course,
+        firstName: firstName.toLocaleUpperCase("en"),
+        lastName: lastName.toLocaleUpperCase("en"),
+        educationalLevel: educationalLevel.toLocaleUpperCase("en"),
+        course: course.toLocaleUpperCase("en"),
         phone,
         email,
         message,
@@ -114,7 +125,7 @@ const Section1 = () => {
           if (res.status === 200) {
             console.log("Response succeeded!");
             setsubmitting(false);
-            setsubmitted(true);
+            setsubmitText("Sent");
             setfirstName("");
             setlastName("");
             seteducationalLevel("");
@@ -122,11 +133,15 @@ const Section1 = () => {
             setcourse("");
             setemail("");
             setmessage("");
+            setTimeout(() => {
+              setsubmitText("Send");
+            }, 3000);
           }
         })
         .catch((reason) => {
           console.log("Failed");
           console.log(reason);
+          setsubmitting(false);
         });
       return;
     }
@@ -155,7 +170,7 @@ const Section1 = () => {
           </address>
           <div className={styles.socialMedia}>
             {contactUsSocialMedia.map((b) => (
-              <a href={b.url} key={b.name}>
+              <a href={b.url} key={b.name} target="_blank" rel="noreferrer">
                 <Image
                   src={b.logo}
                   alt={b.name}
@@ -195,10 +210,17 @@ const Section1 = () => {
                   required
                   placeholder={b.placeholder}
                   onChange={b.onSelectChange}
+                  className={cn({
+                    [styles.firstItem]:
+                      b.value == "" || b.value == coursePlaceholder,
+                  })}
                 >
-                  <option value=""></option>
-                  <option value="Undergraduate">Undergraduate</option>
-                  <option value="Postgraduate">Postgraduate</option>
+                  <option value="">{b.list ? b.list[0] : ""} </option>
+                  {b.list?.slice(1).map((b) => (
+                    <option value={b} key={b}>
+                      {b}
+                    </option>
+                  ))}
                 </select>
               </div>
             ) : (
@@ -214,11 +236,7 @@ const Section1 = () => {
                   minLength={3}
                   maxLength={40}
                   onChange={b.onTextChange}
-                  pattern={
-                    b.type === "tel"
-                      ? "+[0-9]{3} [0-9]{3} [0-9]{3} [0-9]{4}"
-                      : undefined
-                  }
+                  pattern={b.type === "tel" ? phonePattern : undefined}
                 />
               </div>
             )
@@ -228,8 +246,12 @@ const Section1 = () => {
               FSE will not share your details with others without your
               permission.
             </p>
-            <button disabled={submitting} onClick={sendButtonClick}>
-              Send
+            <button
+              disabled={submitting}
+              className={submitText == "Sent" ? styles.sent : undefined}
+              onClick={sendButtonClick}
+            >
+              {submitText}
             </button>
           </div>
         </form>

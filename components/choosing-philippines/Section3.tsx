@@ -25,7 +25,7 @@ const Section3 = () => {
         <section className={styles.images}>
           {block.map((b, i) => (
             <div className={styles.img} key={i}>
-              <Image src={b.image} alt={b.alt} width={400} height={274} />
+              <Image src={b.image} alt={b.alt} width={400} height={274} priority/>
             </div>
           ))}
         </section>

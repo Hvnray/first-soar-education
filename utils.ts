@@ -154,34 +154,34 @@ export const FAQ = [
 
 export const SocialMedia = [
   {
-    url: "www.instagram.com",
+    url: "https://www.instagram.com/soareducationagency/",
     logo: "/footer/instagram.svg",
     name: `${FirstSoarEducation} ${Instagram}`,
   },
   {
-    url: "www.facebook.com",
+    url: "https://www.facebook.com/firstsoareducation/",
     logo: "/footer/facebook.svg",
     name: `${FirstSoarEducation} ${FaceBook}`,
   },
   {
-    url: "www.twitter.com",
+    url: "https://twitter.com/soareducation_",
     logo: "/footer/twitter.svg",
     name: `${FirstSoarEducation} ${Twitter}`,
   },
 ];
 export const contactUsSocialMedia = [
   {
-    url: "www.instagram.com",
+    url: "https://www.instagram.com/soareducationagency/",
     logo: "/contact-us/instagram.svg",
     name: `${FirstSoarEducation} ${Instagram}`,
   },
   {
-    url: "www.facebook.com",
+    url: "https://www.facebook.com/firstsoareducation/",
     logo: "/contact-us/facebook.svg",
     name: `${FirstSoarEducation} ${FaceBook}`,
   },
   {
-    url: "www.twitter.com",
+    url: "https://twitter.com/soareducation_",
     logo: "/contact-us/twitter.svg",
     name: `${FirstSoarEducation} ${Twitter}`,
   },
@@ -211,17 +211,17 @@ export const footerNavLinks = [
 
 export const mobileMenuSocials = [
   {
-    link: "https://www.instagram.com/hvnray",
+    link: "https://www.instagram.com/soareducationagency/",
     image: "/navbar/instagram.svg",
     alt: `${FirstSoarEducation} ${Instagram}`,
   },
   {
-    link: "https://www.instagram.com/hvnray",
+    link: "https://www.facebook.com/firstsoareducation/",
     image: "/navbar/facebook.svg",
     alt: `${FirstSoarEducation} ${FaceBook}`,
   },
   {
-    link: "https://www.instagram.com/hvnray",
+    link: "https://twitter.com/soareducation_",
     image: "/navbar/twitter.svg",
     alt: `${FirstSoarEducation} ${Twitter}`,
   },
@@ -245,3 +245,5 @@ export const degreesInPhillipines = [
   "Public Administration",
   "Pharmacy"
 ];
+
+export const educationalLevelList =['Undergraduate','Postgraduate'] 
