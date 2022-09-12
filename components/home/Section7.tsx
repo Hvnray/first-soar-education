@@ -23,6 +23,8 @@ const Section7 = () => {
           src={ourMission}
           alt="Our Mission Logo"
           quality={100}
+          width={60}
+          height={60}
           priority
         />
         <h3>Our Mission</h3>

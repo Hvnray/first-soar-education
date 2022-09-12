@@ -12,6 +12,8 @@ const Section4 = () => {
             src={Img}
             alt={"photo group of medical students"}
             quality={100}
+            width={1200}
+            height={320}
             priority
           />
         </div>
@@ -20,7 +22,8 @@ const Section4 = () => {
           Humanity”
         </p>
         <p>
-        Begin your journey by filling our contact form. We will help you take that bold step.
+          Begin your journey by filling our contact form. We will help you take
+          that bold step.
         </p>
         <Link href={"/contact-us"}>Fill Form</Link>
       </div>
