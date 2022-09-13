@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/home/section1.module.scss";
-import Image1 from "../../public/image1.svg";
-import Image2 from "../../public/image2.svg";
-import Image3 from "../../public/image3.svg";
-import Image4 from "../../public/image4.svg";
-import Image5 from "../../public/image5.svg";
+import Image1 from "../../public/image1.png";
+import Image2 from "../../public/image2.png";
+import Image3 from "../../public/image3.png";
+import Image4 from "../../public/image4.png";
+import Image5 from "../../public/image5.png";
 import { useNavbarObserver } from "../../customHooks";
 import { useEffect, useState } from "react";
 

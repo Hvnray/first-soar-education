@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/home/section5.module.scss";
-import Image8 from '../../public/image8.svg'
+import Image8 from '../../public/image8.png'
 
 const Section5 = () => {
   return (
@@ -11,6 +11,7 @@ const Section5 = () => {
           src={Image8}
           alt="Medical student holding her note book"
           height={538}
+          width={408}
           quality={100}
           priority
         />
