@@ -2,8 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/medicine/section2.module.scss";
 import Img from "../../public/medicine-docs.svg";
+import { useNavbarObserver } from "../../customHooks";
+import { useEffect, useState } from "react";
 
 const Section2 = () => {
+  const width = useNavbarObserver();
+  const [textArea, settextArea] = useState("fade-up");
+
+  useEffect(() => {
+    settextArea(width >= 800 ? "fade-left" : "fade-up");
+  }, [width]);
   return (
     <section className={styles.section}>
       <div className={styles.header}>
@@ -32,7 +40,7 @@ const Section2 = () => {
             Philippines for their children to study Medicine.
             <Link href={''}>start your Application process &#8594;</Link>
           </p>
-          <div data-aos="fade-left">
+          <div data-aos={textArea}>
           <Image
             src={Img}
             alt={"Medical Doctors' group photo"}

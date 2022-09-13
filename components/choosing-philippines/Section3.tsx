@@ -3,6 +3,8 @@ import styles from "../../styles/choosing-philippines/section3.module.scss";
 import Img1 from "../../public/choosing-philippines/section3-img1.svg";
 import Img2 from "../../public/choosing-philippines/section3-img2.svg";
 import Img3 from "../../public/choosing-philippines/section3-img3.svg";
+import { useNavbarObserver } from "../../customHooks";
+import { useEffect, useState } from "react";
 const Section3 = () => {
   const block = [
     {
@@ -18,10 +20,17 @@ const Section3 = () => {
       alt: "mountains",
     },
   ];
+
+  const width = useNavbarObserver();
+  const [textArea, settextArea] = useState("fade-up");
+
+  useEffect(() => {
+    settextArea(width >= 800 ? "fade-left" : "fade-up");
+  }, [width]);
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <h1 data-aos="fade-left">Discover Philippines</h1>
+        <h1 data-aos={textArea}>Discover Philippines</h1>
       </div>
       <div className={styles.body}>
         <section className={styles.images}>
@@ -29,7 +38,7 @@ const Section3 = () => {
             <div
               className={styles.img}
               key={i}
-              data-aos="fade-left"
+              data-aos={textArea}
               data-aos-delay={i * 200}
             >
               <Image src={b.image} alt={b.alt} priority quality={100} />
