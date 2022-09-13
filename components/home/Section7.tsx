@@ -27,7 +27,7 @@ const Section7 = () => {
           quality={100}
           width={60}
           height={60}
-          // priority
+          priority
         />
         <h3>Our Mission</h3>
       </div>

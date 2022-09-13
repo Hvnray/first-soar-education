@@ -30,7 +30,7 @@ const Section4 = () => {
                 quality={100}
                 width={size}
                 height={size}
-                // priority
+                priority
               />
             </div>
             <p className={styles.title}>{b.title}</p>

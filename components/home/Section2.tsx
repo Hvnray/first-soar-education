@@ -22,7 +22,7 @@ const Section2 = () => {
           src={Image6}
           alt="Manila Graphic"
           layout="responsive"
-          // priority
+          priority
           quality={100}
           />
       </div>

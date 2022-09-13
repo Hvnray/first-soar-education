@@ -12,7 +12,7 @@ const Section5 = () => {
           alt="Medical student holding her note book"
           height={538}
           quality={100}
-          // priority
+          priority
         />
       </div>
       <div className={styles.textSection}>

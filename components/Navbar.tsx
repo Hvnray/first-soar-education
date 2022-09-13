@@ -179,6 +179,7 @@ const Navbar = () => {
                         src={b.image}
                         alt={b.alt}
                         quality={100}
+                        priority
                       />
                     </a>
                   </li>

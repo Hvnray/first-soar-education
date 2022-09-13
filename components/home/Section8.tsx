@@ -39,7 +39,7 @@ const Section8 = () => {
                 quality={100}
                 width={imgSize}
                 height={imgSize}
-                // priority
+                priority
               />
             </div>
             <p className={styles.title}>{b.name}</p>
