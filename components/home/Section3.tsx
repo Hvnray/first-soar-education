@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/home/section3.module.scss";
-import Image7 from "../../public/image7.svg";
+import Image7 from "../../public/image7.png";
 import { useNavbarObserver } from "../../customHooks";
 import { useEffect, useState } from "react";
 

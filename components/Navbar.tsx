@@ -6,8 +6,8 @@ import cn from "classnames";
 import { mobileMenuSocials } from "../utils";
 import { useNavbarObserver } from "../customHooks";
 import { useRouter } from "next/router";
-import DefaultLogo from '../public/logo.svg'
-import WhiteLogo from '../public/logo_white.svg'
+import DefaultLogo from '../public/logo.png'
+import WhiteLogo from '../public/logo_white.png'
 
 type Logos = typeof DefaultLogo | typeof WhiteLogo;
 
@@ -122,6 +122,7 @@ const Navbar = () => {
               src={logo}
               alt="Vercel Logo"
               height={60}
+              width={150}
               quality={100}
               priority
             />

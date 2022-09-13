@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/home/section2.module.scss";
-import Image6 from '../../public/image6.svg'
+import Image6 from '../../public/image6.png'
 import { useNavbarObserver } from "../../customHooks";
 import { useEffect, useState } from "react";
 
