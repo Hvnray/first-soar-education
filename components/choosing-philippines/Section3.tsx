@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "../../styles/choosing-philippines/section3.module.scss";
-import Img1 from "../../public/choosing-philippines/section3-img1.svg";
-import Img2 from "../../public/choosing-philippines/section3-img2.svg";
-import Img3 from "../../public/choosing-philippines/section3-img3.svg";
+import Img1 from "../../public/choosing-philippines/section3-img1.png";
+import Img2 from "../../public/choosing-philippines/section3-img2.png";
+import Img3 from "../../public/choosing-philippines/section3-img3.png";
 import { useNavbarObserver } from "../../customHooks";
 import { useEffect, useState } from "react";
 const Section3 = () => {

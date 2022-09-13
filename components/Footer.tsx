@@ -21,7 +21,7 @@ const Footer = () => {
         {SocialMedia.map((b, i) => (
           <li key={i}>
             <a href={b.url} target="_blank" rel="noreferrer">
-              <Image src={b.logo} alt={b.name} quality={100} priority />
+              <Image src={b.logo} alt={b.name} quality={100} />
             </a>
           </li>
         ))}

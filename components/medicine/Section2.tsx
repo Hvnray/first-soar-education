@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/medicine/section2.module.scss";
-import Img from "../../public/medicine-docs.svg";
+import Img from "../../public/medicine-docs.png";
 import { useNavbarObserver } from "../../customHooks";
 import { useEffect, useState } from "react";
 

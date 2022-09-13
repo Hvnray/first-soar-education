@@ -39,8 +39,8 @@ const Details = ({ title, body, delay, aos }: DetailsParams) => {
         <Image
           src={iconUrl[0]}
           alt={iconUrl[1]}
-          width={60}
-          height={60}
+          width={50}
+          height={50}
           priority
         />
       </div>
@@ -58,10 +58,10 @@ const Section9 = () => {
   }, [width]);
   return (
     <section className={styles.section} id="FAQS">
-      <h2 data-aos="fade-up" data-aos-delay="100">
+      <h2 data-aos={width >= 800 ? "fade-up" : ""} data-aos-delay="100">
         FAQ
       </h2>
-      <h4 data-aos="fade-up" data-aos-delay="100">
+      <h4 data-aos={width >= 800 ? "fade-up" : ""} data-aos-delay="100">
         Frequently Asked Questions
       </h4>
       {FAQ.map((b, i) => (

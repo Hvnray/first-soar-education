@@ -74,7 +74,7 @@ const Section1 = () => {
               <Image
                 src={b.src}
                 alt={b.alt}
-                priority
+                // priority
                 quality={100}
                 width={b.size[0]}
                 height={b.size[1]}
@@ -96,7 +96,7 @@ const Section1 = () => {
                 alt={b.alt}
                 width={b.size[0]}
                 height={b.size[1]}
-                priority
+                // priority
               />
             </div>
           ))}

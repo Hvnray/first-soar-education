@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "../../styles/home/section7.module.scss";
 import ourMission from "../../public/ourMission.svg";
+import { useNavbarObserver } from "../../customHooks";
 
 const Section7 = () => {
+  const width = useNavbarObserver();
   return (
-    <section className={styles.section} id="about-us" data-aos="fade-up">
+    <section className={styles.section} id="about-us" data-aos={width >= 800 ? "fade-up" : ""}>
       <h2 data-aos="fade-up" data-aos-delay="100">About Us</h2>
       <p data-aos="fade-up" data-aos-delay="100">
         First Soar Education guides you through every step of process to study
@@ -25,7 +27,7 @@ const Section7 = () => {
           quality={100}
           width={60}
           height={60}
-          priority
+          // priority
         />
         <h3>Our Mission</h3>
       </div>

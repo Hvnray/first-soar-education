@@ -12,10 +12,17 @@ const Section4 = () => {
   }, [windowWidth]);
   return (
     <section className={styles.section}>
-      <h2 data-aos="fade-up" data-aos-delay="300">Why We Are The Best</h2>
+      <h2 data-aos="fade-up" data-aos-delay={windowWidth > 500 ? 300 : 100}>
+        Why We Are The Best
+      </h2>
       <div className={styles.infoArea}>
         {info.map((b, i) => (
-          <div className={styles.info} key={i} data-aos="fade-up" data-aos-offset="300">
+          <div
+            className={styles.info}
+            key={i}
+            data-aos="fade-up"
+            data-aos-offset={windowWidth > 500 ? 300 : 100}
+          >
             <div className={styles.img}>
               <Image
                 src={b.image}
@@ -23,7 +30,7 @@ const Section4 = () => {
                 quality={100}
                 width={size}
                 height={size}
-                priority
+                // priority
               />
             </div>
             <p className={styles.title}>{b.title}</p>

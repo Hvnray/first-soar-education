@@ -14,22 +14,37 @@ const Section3 = () => {
   }, [width]);
   return (
     <section className={styles.section}>
-      <div className={styles.textArea} >
-        <h1  data-aos="fade-right" data-aos-offset="250">We are always the students choice</h1>
-        <p  data-aos="fade-right">
+      <div className={styles.textArea}>
+        <h1
+          data-aos={width >= 800 ? "fade-right" : "fade-up"}
+          data-aos-offset={width >= 800 ? 250 : 50}
+        >
+          We are always the students choice
+        </h1>
+        <p data-aos={width >= 800 ? "fade-right" : "fade-up"}>
           We provide the best for students Nationwide. First Soar Education is
           committed to provide easy and stress-free process for your study
           abroad with no consultation fee.
         </p>
         <Link href={"/contact-us"}>
-          <button className={styles.connect}  data-aos="fade-up" data-aos-delay="100">Connect With Us</button>
+          <button
+            className={styles.connect}
+            data-aos="fade-up"
+            data-aos-delay={width >= 800 ? 100 : 0}
+          >
+            Connect With Us
+          </button>
         </Link>
       </div>
-      <div className={styles.photoArea} data-aos={photoArea} data-aos-offset="400">
+      <div
+        className={styles.photoArea}
+        data-aos={photoArea}
+        data-aos-offset={width >= 800 ? 400 : 150}
+      >
         <Image
           className={styles.image}
           src={Image7}
-          alt="Vercel Logo"
+          alt="Student giving a thumbs up on blue background"
           priority
           quality={100}
         />

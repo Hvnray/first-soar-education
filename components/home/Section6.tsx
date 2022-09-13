@@ -13,7 +13,7 @@ const Section6 = () => {
   }, [width]);
   return (
     <section className={styles.section}>
-      <h2 data-aos="fade-up" data-aos-delay="300">
+      <h2 data-aos={width >= 800 ? "fade-up" : ""} data-aos-delay="300">
         Feedback From Students
       </h2>
       <div className={styles.feedbacks}>
@@ -31,7 +31,7 @@ const Section6 = () => {
               quality={100}
               width={100}
               height={100}
-              priority
+              // priority
             />
             <h3>{b.name}</h3>
             <div className={styles.divider} />

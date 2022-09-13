@@ -24,7 +24,7 @@
     align-items: center;
 
     .images {
-      width: 60%;
+      width: 90%;
       padding: 1rem;
       display: flex;
       margin: 0 auto;
@@ -88,6 +88,7 @@
     .body {
       .images {
         width: 100%;
+        flex-wrap: wrap;
 
         .img {
           margin-bottom: 1rem;
