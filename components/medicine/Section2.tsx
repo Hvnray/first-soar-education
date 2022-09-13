@@ -32,6 +32,7 @@ const Section2 = () => {
             Philippines for their children to study Medicine.
             <Link href={''}>start your Application process &#8594;</Link>
           </p>
+          <div data-aos="fade-left">
           <Image
             src={Img}
             alt={"Medical Doctors' group photo"}
@@ -40,6 +41,8 @@ const Section2 = () => {
             height={402}
             priority
           />
+
+          </div>
         </div>
         <Link href={'/contact-us'}>start your Application process &#8594;</Link>
       </div>

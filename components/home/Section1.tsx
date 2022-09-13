@@ -1,13 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/home/section1.module.scss";
-import Image1 from '../../public/image1.svg'
-import Image2 from '../../public/image2.svg'
-import Image3 from '../../public/image3.svg'
-import Image4 from '../../public/image4.svg'
-import Image5 from '../../public/image5.svg'
+import Image1 from "../../public/image1.svg";
+import Image2 from "../../public/image2.svg";
+import Image3 from "../../public/image3.svg";
+import Image4 from "../../public/image4.svg";
+import Image5 from "../../public/image5.svg";
+import { useNavbarObserver } from "../../customHooks";
+import { useEffect, useState } from "react";
 
 const Section1 = () => {
+  const width = useNavbarObserver();
+  const [textArea, settextArea] = useState("");
+  const [landscapes, setlandscapes] = useState("fade-left");
+  const [portraits, setportraits] = useState("fade-up");
+
+  useEffect(() => {
+    settextArea(width >= 800 ? "fade-right" : "fade-up");
+    setlandscapes(width >= 800 ? "fade-left" : "fade-up");
+    setportraits(width >= 800 ? "fade-up" : "fade-up");
+  }, [width]);
+
   const imgs = [
     {
       src: Image1,
@@ -37,7 +50,7 @@ const Section1 = () => {
   ];
   return (
     <section className={styles.section}>
-      <div className={styles.textArea}>
+      <div className={styles.textArea} data-aos={textArea}>
         <h1>Do you want to study in the Philippines?</h1>
         <h2>
           We are always happy to consult and guide you on every process to study
@@ -51,7 +64,13 @@ const Section1 = () => {
       <div className={styles.photoArea}>
         <div className={styles.portraits}>
           {imgs.slice(0, 2).map((b, i) => (
-            <div className={styles.img} key={i}>
+            <div
+              className={styles.img}
+              key={i}
+              data-aos={portraits}
+              data-aos-duration="1000"
+              data-aos-delay={i * 150}
+            >
               <Image
                 src={b.src}
                 alt={b.alt}
@@ -65,7 +84,13 @@ const Section1 = () => {
         </div>
         <div className={styles.landscapes}>
           {imgs.slice(2).map((b, i) => (
-            <div className={styles.img} key={i}>
+            <div
+              className={styles.img}
+              key={i}
+              data-aos={landscapes}
+              data-aos-duration="1000"
+              data-aos-delay={i * 200}
+            >
               <Image
                 src={b.src}
                 alt={b.alt}

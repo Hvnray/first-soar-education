@@ -27,12 +27,12 @@ const Section4 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <h1>Do you want to study Medicine in the Philippines?</h1>
+        <h1 data-aos="fade-up">Do you want to study Medicine in the Philippines?</h1>
       </div>
       <div className={styles.body}>
         <section className={styles.images}>
           {block.map((b, i) => (
-            <div className={styles.img} key={i}>
+            <div className={styles.img} key={i} data-aos="fade-left" data-aos-delay={i * 200}>
               <Image
                 src={b.image}
                 alt={b.alt}
@@ -42,7 +42,7 @@ const Section4 = () => {
             </div>
           ))}
         </section>
-        <Link href={"/medicine"}>Click Here</Link>
+        <Link data-aos="fade-up" href={"/medicine"}>Click Here</Link>
       </div>
     </section>
   );

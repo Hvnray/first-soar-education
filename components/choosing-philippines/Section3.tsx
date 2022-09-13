@@ -21,44 +21,44 @@ const Section3 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <h1>Discover Philippines</h1>
+        <h1 data-aos="fade-left">Discover Philippines</h1>
       </div>
       <div className={styles.body}>
         <section className={styles.images}>
           {block.map((b, i) => (
-            <div className={styles.img} key={i}>
-              <Image
-                src={b.image}
-                alt={b.alt}
-                priority
-                quality={100}
-              />
+            <div
+              className={styles.img}
+              key={i}
+              data-aos="fade-left"
+              data-aos-delay={i * 200}
+            >
+              <Image src={b.image} alt={b.alt} priority quality={100} />
             </div>
           ))}
         </section>
         <section className={styles.texts}>
-          <p>
+          <p data-aos="fade-up">
             This beautiful country is made up of over 7,107 Islands, which makes
             up big and small cities. It is surrounded by the Pacific Ocean to
             the West, Bash Channel to the North, The Lulu and Celebs Seas to the
             South. Offering a completely new experience to students.
           </p>
-          <p>
+          <p data-aos="fade-up">
             The USA, China, Thailand, India and Nigeria are some countries from
             which students come to study in the Philippines. The country has the
             highest literacy rate of over 94%.
           </p>
-          <p>
+          <p data-aos="fade-up">
             Apart from quality education at its best, It has wonderful Tourist
             Attractions. Top of the list include
           </p>
           <ul>
-            <li>Chocolate Hills</li>
-            <li>Malapascula Island</li>
-            <li>Banaue Rice Terraces</li>
-            <li>Borocay</li>
-            <li>Palawan Island</li>
-            <li>Puerto Princesa Underground River</li>
+            <li data-aos="fade-up">Chocolate Hills</li>
+            <li data-aos="fade-up">Malapascula Island</li>
+            <li data-aos="fade-up">Banaue Rice Terraces</li>
+            <li data-aos="fade-up">Borocay</li>
+            <li data-aos="fade-up">Palawan Island</li>
+            <li data-aos="fade-up">Puerto Princesa Underground River</li>
           </ul>
         </section>
       </div>

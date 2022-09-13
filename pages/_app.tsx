@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import "../styles/globals.scss";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
@@ -6,6 +10,15 @@ import Footer from "../components/Footer";
 import { CustomAppProps } from "../utils";
 
 function MyApp({ Component, pageProps }: CustomAppProps) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      // easing: "ease-out-cubic",
+      // once: true,
+      // offset: 50,
+    });
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>

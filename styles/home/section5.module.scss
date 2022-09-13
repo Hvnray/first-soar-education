@@ -25,7 +25,12 @@
       color: #16161d;
     }
 
+    span {
+      display: block;
+    }
+
     a {
+      display: inline-block;
       font-weight: 400;
       font-size: 1.5rem;
       line-height: 150%;
@@ -113,7 +118,7 @@
         padding: 0 1.2rem;
       }
 
-      a {
+      a span {
         font-size: 1.2rem;
         line-height: 150%;
 

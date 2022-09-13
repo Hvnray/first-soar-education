@@ -4,10 +4,10 @@ const Section1 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <h1>MD IN THE PHILIPPINES</h1>
+        <h1 data-aos="fade-up">MD IN THE PHILIPPINES</h1>
       </div>
       <div className={styles.body}>
-        <p>Doctor of Medicine</p>
+        <p data-aos="fade-up">Doctor of Medicine</p>
       </div>
     </section>
   );

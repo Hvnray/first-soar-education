@@ -6,7 +6,7 @@ import Img from "../../public/medicine-footer-banner.svg";
 const Section4 = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.body}>
+      <div className={styles.body} data-aos="fade-up">
         <div className={styles.img}>
           <Image
             src={Img}

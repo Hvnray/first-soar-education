@@ -10,7 +10,7 @@ const Section2 = () => {
       <div className={styles.body}>
         <ul>
           {degreesInPhillipines.map((b) => (
-            <li key={b}> {b}</li>
+            <li key={b}  data-aos="fade-up"> {b}</li>
           ))}
         </ul>
       </div>
