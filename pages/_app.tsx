@@ -1,15 +1,17 @@
-import { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
-
 import "../styles/globals.scss";
+
+import AOS from "aos";
+import { CustomAppProps } from "../utils";
+import Footer from "../components/Footer";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Index.module.scss";
-import Footer from "../components/Footer";
-import { CustomAppProps } from "../utils";
+import { useEffect } from "react";
+import { useFacebookPixelTracker } from "../customHooks";
 
 function MyApp({ Component, pageProps }: CustomAppProps) {
+  useFacebookPixelTracker()
   useEffect(() => {
     AOS.init({
       duration: 1000,

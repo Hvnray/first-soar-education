@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import { useRouter } from "next/router";
 
 export function useNavbarObserver() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -29,4 +30,30 @@ export function useNavbarObserver() {
     };
   }, []);
   return windowWidth;
+}
+
+export function useFacebookPixelTracker() {
+  const router = useRouter();
+  useEffect(() => {
+    const pixel_id = process.env.NEXT_PUBLIC_FB_PIXEL_ID!;
+    let ReactPixel: typeof import("C:/workspace/first-soar-education/node_modules/react-facebook-pixel/types/index");
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((FBReactPixel) => {
+        ReactPixel = FBReactPixel;
+        ReactPixel.init(pixel_id); // facebookPixelId
+        ReactPixel.pageView();
+
+        router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      });
+    return () => {
+      if (ReactPixel) {
+        router.events.off("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      }
+    };
+  }, [router.events]);
 }
