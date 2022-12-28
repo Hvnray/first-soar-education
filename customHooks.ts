@@ -36,7 +36,7 @@ export function useFacebookPixelTracker() {
   const router = useRouter();
   useEffect(() => {
     const pixel_id = process.env.NEXT_PUBLIC_FB_PIXEL_ID!;
-    let ReactPixel: typeof import("C:/workspace/first-soar-education/node_modules/react-facebook-pixel/types/index");
+    let ReactPixel: typeof import("./node_modules/react-facebook-pixel/types/index");
     import("react-facebook-pixel")
       .then((x) => x.default)
       .then((FBReactPixel) => {
