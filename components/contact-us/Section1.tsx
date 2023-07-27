@@ -157,15 +157,15 @@ const Section1 = () => {
           <h2>Contact Information</h2>
           <p>Fill up the form, and we will respond to you within 24 hours.</p>
           <address>
-            <a href="tel:+2348126003334" className={styles.contactUsPhoneNos}>
-              +234 812 600 3334
+            <a href="tel:+2349164456619" className={styles.contactUsPhoneNos}>
+              +234 916 44566 19
             </a>
             <br />
             <a
-              href="mailto:Firstsoareducation@gmail.com"
+              href="mailto:firstsoareducation@gmail.com"
               className={styles.contactUsEmail}
             >
-              Firstsoareducation@gmail.com
+              firstsoareducation@gmail.com
             </a>
           </address>
           <div className={styles.socialMedia}>

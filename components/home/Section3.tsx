@@ -6,6 +6,7 @@ import { useNavbarObserver } from "../../customHooks";
 import { useEffect, useState } from "react";
 
 const Section3 = () => {
+
   const width = useNavbarObserver();
   const [photoArea, setphotoArea] = useState("fade-up");
 

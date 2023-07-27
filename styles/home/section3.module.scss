@@ -1,8 +1,9 @@
 .section {
   display: flex;
-  width: 75%;
+  width: 90%;
+  max-width: 1440px;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 100px auto;
   margin-bottom: 1rem;
   padding: 4rem;
 
@@ -107,6 +108,7 @@ button.connect {
 
       .image {
         vertical-align: bottom;
+        object-fit: cover;
       }
 
       button.connect {

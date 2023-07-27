@@ -188,7 +188,7 @@ export const FAQ = [
 
 export const SocialMedia = [
   {
-    url: "https://www.instagram.com/soareducationagency/",
+    url: "https://www.instagram.com/firstsoareducation/",
     logo: footer_instagram,
     name: `${FirstSoarEducation} ${Instagram}`,
   },
