@@ -162,10 +162,10 @@ const Section1 = () => {
             </a>
             <br />
             <a
-              href="mailto:Firstsoareducation@gmail.com"
+              href="mailto:firstsoareducation@gmail.com"
               className={styles.contactUsEmail}
             >
-              Firstsoareducation@gmail.com
+              firstsoareducation@gmail.com
             </a>
           </address>
           <div className={styles.socialMedia}>
