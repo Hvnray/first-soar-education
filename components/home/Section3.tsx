@@ -6,6 +6,11 @@ import { useNavbarObserver } from "../../customHooks";
 import { useEffect, useState } from "react";
 
 const Section3 = () => {
+
+  const imageStyle = {
+    objectFit: 'cover',
+  };
+
   const width = useNavbarObserver();
   const [photoArea, setphotoArea] = useState("fade-up");
 
@@ -47,6 +52,7 @@ const Section3 = () => {
           alt="Student giving a thumbs up on blue background"
           priority
           quality={100}
+          style={imageStyle}
         />
       </div>
     </section>
