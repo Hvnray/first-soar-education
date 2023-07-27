@@ -52,7 +52,7 @@ const Section3 = () => {
           alt="Student giving a thumbs up on blue background"
           priority
           quality={100}
-          style={imageStyle}
+          style={imageStyle as React.CSSProperties}
         />
       </div>
     </section>
